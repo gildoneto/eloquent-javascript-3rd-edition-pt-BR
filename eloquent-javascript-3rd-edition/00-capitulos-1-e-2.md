@@ -186,7 +186,17 @@ Nomes de variáveis não podem ter o mesmo nome de uma (*keyword*) palavra reser
 
 `break` `case` `catch` `continue` `debugger` `default` `delete` `do` `else` `false` `finally` `for` `function` `if` `implements` `in` `instanceof` `interface` `let` `new` `null` `package` `private` `protected` `public` `return` `static` `switch` `throw` `true` `try` `typeof` `var` `void` `while` `with` `yield` `this` 
 
+### Functions (funções)
 
+Em construção 👷 🚧 
 
-# Resolução de Desafios
+# Exercícios 
+
+Os exercícios abaixo são propostos pelo autor, abordando o que foi aprendido nos capítulos 1 e 2.
+
+[Clicando aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md) você pode ler e tentar fazer os exercícios da segunda edição traduzida pela BrazilJS.
+
+Tente fazer os exercícios e depois volte aqui para checar minhas respostas comentadas e as respostas do autor.
+
+### Looping a Triangle
 
