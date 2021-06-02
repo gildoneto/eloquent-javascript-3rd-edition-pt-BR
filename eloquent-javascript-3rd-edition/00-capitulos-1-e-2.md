@@ -190,6 +190,8 @@ Nomes de variáveis não podem ter o mesmo nome de uma (*keyword*) palavra reser
 
 Em construção 👷 🚧 
 
+...
+
 # Exercícios 
 
 Os exercícios abaixo são propostos pelo autor, abordando o que foi aprendido nos capítulos 1 e 2.
@@ -198,5 +200,5 @@ Os exercícios abaixo são propostos pelo autor, abordando o que foi aprendido n
 
 Tente fazer os exercícios e depois volte aqui para checar minhas respostas comentadas e as respostas do autor.
 
-### Looping a Triangle
+### [Exercícios respondidos](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/00-capitulos-1-e-2-exercicios.md) ⬅
 
