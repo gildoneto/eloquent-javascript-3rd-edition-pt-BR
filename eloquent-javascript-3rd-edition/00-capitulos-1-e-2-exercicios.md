@@ -37,7 +37,7 @@ Minha primeira resposta:
   - `console.log` imprime o valor da variável `secret` a cada iteração 
 - fim do código 
 
-[01_looping-a-triangle.png ](https://raw.githubusercontent.com/gildoneto/estudando-javascript/master/eloquent-javascript-3rd-edition/img/01_looping-a-triangle.png)
+![01_looping-a-triangle.png](https://raw.githubusercontent.com/gildoneto/estudando-javascript/master/eloquent-javascript-3rd-edition/img/01_looping-a-triangle.png)
 
 Abaixo segue a resposta do autor. Por razões óbvias o código dele é menor e mais simples:
 
