@@ -17,8 +17,10 @@ Cada tópico abaixo refere-se a um breve resumo de cada capítulo e logo baixo o
 
 > STATUS DE ANDAMENTO DO RESUMO DO ELOQUENT JAVASCRIPT: **5%**
 
-- [Capitulos 1 e 2](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/00-capitulos-1-e-2.md)
-  - [Exercícios](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/00-capitulos-1-e-2-exercicios.md)
+- [Capitulo 1 - Valores, Tipos e Operadores](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/01-chapter-1-values-types-operators.md)
+
+- [Capitulo 2 - Estrutura do Programa](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/02-chapter-2-program-structure.md)
+  - [Exercícios Capitulos 1 e 2](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/22-exercises-chapters-1-and-2.md)
 
 
 

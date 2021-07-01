@@ -72,5 +72,5 @@ Os exercícios abaixo são propostos pelo autor, abordando o que foi aprendido n
 
 Tente fazer os exercícios e depois volte aqui para checar minhas respostas comentadas e as respostas do autor.
 
-### [Exercícios respondidos](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/00-capitulos-1-e-2-exercicios.md) ⬅
+### [Exercícios respondidos](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/22-exercises-chapters-1-and-2.md) ⬅
 
