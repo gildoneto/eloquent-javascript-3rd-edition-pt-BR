@@ -37,12 +37,9 @@ Minha primeira resposta:
 
 - fim do código 
 
-  <details><summary> Expanda aqui para ver minha resposta </summary>
-  <p>
-      <img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/master/eloquent-javascript-3rd-edition/img/01_looping-a-triangle.png" alt="01_looping-a-triangle.png" style="zoom:40%;" />
-  </p>    
-  </details>
 
+  <img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/master/eloquent-javascript-3rd-edition/img/01_looping-a-triangle.png" alt="01_looping-a-triangle.png" width="500" />
+  
 
 
 Abaixo segue a resposta do autor. Por razões óbvias o código dele é menor e mais simples:
