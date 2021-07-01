@@ -38,7 +38,7 @@ Minha primeira resposta:
 - fim do código 
 
 
-  <img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/master/eloquent-javascript-3rd-edition/img/01_looping-a-triangle.png" alt="01_looping-a-triangle.png" width="500" />
+  <img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/master/eloquent-javascript-3rd-edition/img/01_looping-a-triangle.png" alt="01_looping-a-triangle.png" width="600" />
   
 
 
