@@ -60,6 +60,52 @@ Nomes de variáveis não podem ter o mesmo nome de uma (*keyword*) palavra reser
 
 ### Functions (funções)
 
+Muito dos valores disponibilizados no ambiente default são do tipo *function*. Uma função é um pedaço de um programa encapsulado num valor. Esses valores podem ser *usados* para executar o programa encapsulado. Por exemplo, num ambiente de browser(navegador), a variável `prompt` contém uma função que mostra uma pequena caisa de diálogo solicitando um input do usuário. Ele é usado desta forma:
+
+```javascript
+prompt("Digite sua senha")
+```
+
+<img src="https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/img/prompt.png?raw=true" alt="prompt.png" width="400" />
+
+O ato de executar uma função é chamada de *invoking*, *calling*, or *applying it*. Em português uso muito a palavra "chamar". Você pode *chamar* uma função colocando um parênteses depois da expressão que dá nome a ela. Normalmente você irá chamar diretamente o nome da variável que contém a função. Os valores entre os parênteses são levados para o programa dentro da função. No exemplo acima, a função `prompt` usa a string que passamos como um texto a ser exibido no dialog box. Valores dados a funções são chamados de *arguments*. As funções podem ter mais de um argumento e também mais de um tipo de argumento.
+
+A função `prompt` não é mais usada no programação web moderna, principalmente porque não temos como fazer qualquer modificação na forma de como esse dialog box é exibido para o usuário.  Mas pode ser útil em programas feitos apenas para estudo ou experimentos.
+
+
+
+### A function console.log
+
+A maioria dos sistemas JavaScript (incluindo todos os navegadores modernos e o Node.js) disponibilizam a função `console.log` que exibe os argumentos passados na chamada com um output de texto. Nos navegadores, esse output fica no console JavaScript, que por padrão fica escondido, mas a maioria deles exibe o console apenas pressionando a tecla F12, se não funcionar, procure algo no menu relacionado a Developer Tools.
+
+Apesar do `console.log` ter um ponto, funções não podem conter esse caractere `.` , isso ocorre porque ele não é um binding simples. Isto na verdade é uma expressão que acessa a propriedade `log` do objeto `console`. Isso vai ser melhor explicado no [Capítulo 4](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/04-chapter-4-data-structures-objects-and-arrays.md).
+
+### Retornando Valores
+
+Mostrar um *dialog box* ou exibir um texto na tela é um *side effect* (efeito colateral(?)). Várias funções são úteis por causa dos *side effects* que elas produzem. Funções também podem produzir valores, e nesse caso não precisam ter um *side effect* para ser úteis. Por exemplo, a função `Math.max` recebe uma quantidade de números como argumentos e devolve o maior deles.
+
+````javascript
+console.log(Math.max(9, 1, 5, 7))
+// → 9
+````
+
+Quando uma função produz um valor, dizemos que ela *retorna* aquele valor. Tudo que produz valor é uma **expressão** em JavaScript, o que significa que chamadas de funções podem ser usadas dentro de expressões maiores. No exemplo abaixo temos uma chamada do `Math.min`, que é o oposto do `Math.max`, usada como parte de uma expressão de soma:
+
+````javascript
+console.log(Math.min(3, 9) + 7)
+// → 10
+````
+
+O [próximo capítulo](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/03-chapter-3-functions.md) explica melhor como escrever suas próprias funções.
+
+
+
+### Controle de Fluxo
+
+Quando seu programa contém mais de uma declaração (*statement*), as declarações são executadas de cima para baixo (*from top to bottom*).
+
+O programa abaixo tem duas declaracoes. A primeira pede um número ao usuário , e a segunda, que é executada depois da primeira, mostra a raíz quadradada do número digitado.
+
 Em construção 👷 🚧 
 
 ...
