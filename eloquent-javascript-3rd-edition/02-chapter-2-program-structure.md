@@ -104,9 +104,58 @@ O [próximo capítulo](https://github.com/gildoneto/estudando-javascript/blob/ma
 
 Quando seu programa contém mais de uma declaração (*statement*), as declarações são executadas de cima para baixo (*from top to bottom*).
 
-O programa abaixo tem duas declaracoes. A primeira pede um número ao usuário , e a segunda, que é executada depois da primeira, mostra a raíz quadradada do número digitado.
+O programa abaixo tem duas declaracoes. A primeira pede um número ao usuário , e a segunda, que é executada depois da primeira, mostra a raíz quadrada do número digitado.
+
+````javascript
+let theNumber = Number(prompt("digite um numero"));
+console.log("O numero digitado é a raíz quadrada de " +
+            theNumber * theNumber);
+````
+
+A função `Number` convert um valor em número. Precisamos falar sobre isso porque o `prompt` retorna uma string, e nós queremos um número. Existem funções similares chamadas `String` e `Boolean` que convertem valores para esses tipos.
+
+Aqui está uma representação esquemática bastante trivial do fluxo de controle em linha reta‎:
+
+<img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/3fbc72247f9d888265de03d0d07a781e98cacdb3/eloquent-javascript-3rd-edition/img/controlflow-straight.svg" alt="linha reta" align="left"/>
+
+### Execução Condicional
+
+Nem todos os programas são estradas retas. Podemos, por exemplo, criar uma bifurcação , onde o programa escolhe automaticamente o caminho certo. Isto é chamado de *conditional execution* (execução condicional).
+
+<img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/3fbc72247f9d888265de03d0d07a781e98cacdb3/eloquent-javascript-3rd-edition/img/controlflow-if.svg" alt="linha reta" align="left"/>
+
+Uma *execução condicional* é criada com a *keyword* `if` (*se*) no JavaScript. Sendo simplista, queremos que um determinado trecho de código seja executado se, e somente se, uma determinada condição for válida. Podemos, por exemplo, querer mostrar a raíz quadrada de um input apenas se ele for de fato um número.
+
+````javascript
+let theNumber = Number(prompt("digite um numero"));
+if (!Number.isNaN(theNumber)) {
+console.log("O numero digitado é a raíz quadrada de " +
+            theNumber * theNumber);
+}
+````
+
+Com essa modificação, se você digitar **"Carangueijo"**, nenhum output é exibido. 
+
+A *keyword* `if` executa ou ignora uma declaração (*statement*) dependendo do valor de uma expressão Booleana. A expressão decisiva é escrita depois da *keyword* `if`, entre parênteses, seguida de uma declaração para executar.
+
+A função `Number.isNan` é nativa do JavaScript e somente retorna `true` se o argumento passado for `NaN` (not a number). A função `Number` retorna `NaN` quando você passa um argumento do tipo string, que não representa um número válido. Então, lemos o programa acima da seguinte forma: "somente se theNumber não seja um Not-a-Number, faça isso".
+
+A declaração depois do `if` está entre [chaves](a "braces")  ({ and }) neste exemplo. As [chaves](a "braces") podem ser usadas para agrupar várias declarações dentro de uma única [declaração](a "statement"), chamada de *block* (bloco). Você também pode omitir as [chaves](a "braces"), desde que seja uma única [declaração](a "statement"), mas pra evitar ter que pensar sobre quando as chaves são necessárias, a maioria dos programadores JavaScript usam as [chaves](a "braces") em cada bloco de código como esse. Este livro segue esse padrão, a não ser que a [declaração](a "statement") seja de apenas uma linha.
+
+````javascript
+if (1 + 1 == 2) console.log("É verdade esse bilete"); 
+// → É verdade esse bilete
+````
+
+Em vários casos você não terá um código que seja executado quando a condição não retornar como o esperado, seja o retorno`true` ou `false`.
+
+Esse caminho alternativo é representado pela segunda flexa no diagrama acima. Você pode usar a [keyword](a "palavra reservada") `else` junto com a `if` para criar dois caminhos separados de execução alternativa.
+
+
 
 Em construção 👷 🚧 
+
+<img src="" alt="linha reta" align="left"/>
 
 ...
 
