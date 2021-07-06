@@ -8,6 +8,8 @@
 [statement]: ## "statement"
 [control flow]: ## "controle de fluxo"
 
+[body]: ## "corpo"
+
 ### Expressões e instruções (expressions and statements)
 
 Uma *expression* é um fragmento de uma sentença que produz um valor. Cada valor que é definido literalmente como `99` ou `"Playstation"` é uma *expression*.
@@ -70,7 +72,7 @@ Muito dos valores disponibilizados no ambiente default são do tipo *function*. 
 prompt("Digite sua senha")
 ```
 
-<img src="https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/img/prompt.png?raw=true" alt="prompt.png" width="400" />
+<img src="https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/img/prompt.png?raw=true" alt="Prompt do Edge" width="400" />
 
 O ato de executar uma função é chamada de *invoking*, *calling*, or *applying it*. Em português uso muito a palavra "chamar". Você pode *chamar* uma função colocando um parênteses depois da expressão que dá nome a ela. Normalmente você irá chamar diretamente o nome da variável que contém a função. Os valores entre os parênteses são levados para o programa dentro da função. No exemplo acima, a função `prompt` usa a string que passamos como um texto a ser exibido no dialog box. Valores dados a funções são chamados de *arguments*. As funções podem ter mais de um argumento e também mais de um tipo de argumento.
 
@@ -120,13 +122,24 @@ A função `Number` convert um valor em número. Precisamos falar sobre isso por
 
 Aqui está uma representação esquemática bastante trivial do fluxo de controle em linha reta‎:
 
+<br>
 <img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/3fbc72247f9d888265de03d0d07a781e98cacdb3/eloquent-javascript-3rd-edition/img/controlflow-straight.svg" alt="linha reta" align="left"/>
+<br>
+<br>
+
+
 
 ### Execução Condicional
 
 Nem todos os programas são estradas retas. Podemos, por exemplo, criar uma bifurcação , onde o programa escolhe automaticamente o caminho certo. Isto é chamado de *conditional execution* (execução condicional).
 
+<br>
 <img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/3fbc72247f9d888265de03d0d07a781e98cacdb3/eloquent-javascript-3rd-edition/img/controlflow-if.svg" alt="fluxo if" align="left"/>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 Uma *execução condicional* é criada com a *keyword* `if` (*se*) no JavaScript. Sendo simplista, queremos que um determinado trecho de código seja executado se, e somente se, uma determinada condição for válida. Podemos, por exemplo, querer mostrar a raíz quadrada de um input apenas se ele for de fato um número.
 
@@ -184,7 +197,14 @@ O programa primeiro irá checar se `num` é menor que 10. Se for, ele segue esse
 
 O diagrama para esse programa poderia ser representado por essa figura:
 
+<br>
 <img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/fbb1e4460a78e7fbc12230736fe71d712aaac715/eloquent-javascript-3rd-edition/img/controlflow-nested-if.svg" alt=" else if aninhados" align="left"/>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ### Loops While e Do
 
@@ -202,7 +222,11 @@ console.log(12);
 
 Funcionaria, mas a ideia de escrever um programa é justamente ter "menos" trabalho, não mais. Se precisássemos de todos os números pares menores que 1.000, o exemplo acima seria impraticável. O que precisamos é de uma forma de rodar um pedaço de código múltiplas vezes. Esta forma de [control flow][control flow] é chamada de **loop**.
 
-<img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/fbb1e4460a78e7fbc12230736fe71d712aaac715/eloquent-javascript-3rd-edition/img/controlflow-loop.svg" alt="loop" align="left"/>
+<br>
+<img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/fbb1e4460a78e7fbc12230736fe71d712aaac715/eloquent-javascript-3rd-edition/img/controlflow-loop.svg" alt="loop" align="left"/> <br>
+<br>
+<br>
+<br>
 
 O controle de fluxo **Loop** nos permite voltar para certo ponto do programa onde estávamos antes e repete isso com nosso atual estado do programa. Se combinarmos isso com um [binding][binding] que faça uma contagem, podemos fazer algo parecido com isto: 
 
@@ -217,7 +241,7 @@ while (number <= 12) {
 //   … etcetera
 ````
 
-A [declaração][statement] que começa com a [keyword][keyword] `while` cria o **loop**. A palavra `while` é seguida por uma expressão em parênteses e logo após uma declaração bem parecida com o `if`. O **loop** segue executando a declaração até que a expressão produza um valor que retorna `true` quando convertido para booleano.
+A [declaração][statement] que começa com a [keyword][keyword] `while` cria o **loop**. A palavra `while` é seguida por uma expressão em parênteses e logo após uma declaração bem parecida com o `if`. O **loop** segue executando a declaração até que a expressão produza um valor que retorna `true` quando convertido para Booleano.
 
 O [binding][binding] `number` demonstra a forma como um binding pode acompanhar o progresso de um programa. Cada vez que o loop se repete, `number` recebe seu valor atual acrescido de 2. No começo de cada repetição, `number` é comparado com o número 12 para decidir quando trabalho desde programa será finalizado.
 
@@ -234,11 +258,30 @@ console.log(result);
 // → 1024
 ````
 
+O contador também poderia começar com o valor 1 e checar por menor ou igual a 10 (<= 10), mas por razões que serão discutidas no [Capítulo 4](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/04-chapter-4-data-structures-objects-and-arrays.md), é sempre uma boa ideia se acostumar a iniciar o contador por 0.
+
+Um loop `do` tem uma estrutura de controle similar ao loop `while`. Eles se diferem somente em um ponto: um loop `do` executa seu [body][body] pelo menos uma vez, e inicia o teste se deve para somente após a primeira execução. Pra reproduzir este cenário, o teste deve aparecer depois do [body][body] do loop.
+
+````javascript
+let yourName;
+do {
+  yourName = prompt("Digite seu nome");
+} while (!yourName);
+console.log(yourName);
+````
+
+Este programa vai te forçar a digitar um nome. E irá solicitar isso de novo e de novo até receber um valor que não seja uma string vazia. O operador `!` irá converter o valor para Booleano antes de negar, e todas as strings exceto "" convertem para `true`. Isso significa que o loop continuará rodando até você digitar um nome não-vazio.
+
+
+
+### Identando o Código
+
+Nos exemplos acima, percebe-se que se é adicionado espaços na frente de [declarações][statement] 
+
+
 
 
 Em construção 👷 🚧 
-
-This is a [TEST][binding]
 
 <img src="" alt="linha reta" align="left"/>
 
