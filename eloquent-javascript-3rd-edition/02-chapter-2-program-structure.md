@@ -11,6 +11,8 @@
 [body]: ## "corpo"
 [block]: ## "bloco"
 [semicolon]: ## "ponto e vírgula ;"
+[remainder]: ## "resto da divisão %"
+[label]: ## "label"
 
 ### Expressões e instruções (expressions and statements)
 
@@ -341,9 +343,78 @@ for (let current = 20; ; current = current + 1) {
 // → 21
 ````
 
+Usar o operador [remainder][remainder] `%` é uma forma fácil de testar quando um número é divisível por outro número. Se ele for, o resto da divisão é ZERO.
+
+A estrutura `for` no exemplo acima não possui uma parte que faz a checagem para finalizar o loop. Isso significa que o loop nunca irá parar até que a expressão `break` seja executada.
+
+Se voce remover a expressão `break` ou acidentalmente escrever uma condição final que sempre retorna `true`, seu programa ficará preso num *loop infinito*. Um programa preso num loop infinito nunca irá parar de rodar, o que normalmente é uma coisa ruim.
+
+A [keyword][keyword] `continue` é similar ao `break`, e influencia o progresso do loop. Quando um `continue` é encontrado no [body][body] de um loop, o controle sai do [body][body] e continua com a próxima iteração do loop.
 
 
 
+### Atualizando Bindings Sucintamente
+
+
+
+Especialmente durante um loop, um programa normalmente precisa atualizar um [binding][binding] para guardar um valor baseado no valor anterior deste mesmo binding.
+
+````javascript
+counter = counter + 1;
+````
+
+O JavaScript disponibiliza um atalho pra isso:
+
+````javascript
+counter =+ 1;
+````
+
+Atalhos similares funcionam pra vários outros operadores, como o `result *= 2` para dobrar o `result`, ou `counter -= 1` pra fazer contagem regressiva.
+
+Isso nos permite diminuir nosso exemplo de contagem ainda um pouco mais.
+
+````javascript
+for (let number = 0; number <= 12; number += 2) {
+  console.log(number);
+}
+````
+
+Para `counter += 1` e `counter -= 1`, existe equivalentes ainda menores:
+
+`counter++` e `counter--`.
+
+
+
+### Despachando um Valor com Switch
+
+Nao é incomum encontrar códigos parecidos com este:
+
+````javascript
+if (x == "value1") action1();
+else if (x == "value2") action2();
+else if (x == "value3") action3();
+else defaultAction();
+````
+
+Existe uma estrutura chamada `switch` que tem o intuito de expressar esse "despacho" de uma forma mais direta. Infelizmente, a sintaxe que o JavaScript usa pra isso (que foi herdado do C e Java) é um pouco estranha - uma cadeia de expressões `if` parecem ser melhor. Segue um exemplo:
+
+````javascript
+switch (prompt("What is the weather like?")) {
+  case "rainy":
+    console.log("Remember to bring an umbrella.");
+    break;
+  case "sunny":
+    console.log("Dress lightly.");
+  case "cloudy":
+    console.log("Go outside.");
+    break;
+  default:
+    console.log("Unknown weather type!");
+    break;
+}
+````
+
+Você pode colocar quantos [rótulos][label] `case` quiser dentro do bloco aberto pelo `switch`. O programa começará executando a partir do rótulo que corresponde com o valor dado ao `switch`, ou a partir do `default` se nenhum valor de comparação for encontrado. Ele continuará executando, mesmo entre outros rótulos, até encontrar uma expressão `break`. Em alguns rótulos `case`, assim como no "sunny", podem ser usados para compartilhar código entre [rótulos][label] `case` (ele recomenda sair de casa para os dois casos, sunny e cloudy). Mas tenha cuidado, é bastante comum esquecer de do `break`, o que fará com que o programa execute código que você não quer que seja executado.
 
 Em construção 👷 🚧  é
 
