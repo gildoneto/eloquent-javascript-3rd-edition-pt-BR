@@ -9,6 +9,8 @@
 [control flow]: ## "controle de fluxo"
 
 [body]: ## "corpo"
+[block]: ## "bloco"
+[semicolon]: ## "ponto e vírgula ;"
 
 ### Expressões e instruções (expressions and statements)
 
@@ -20,19 +22,19 @@ Se uma *expression* é um fragmento de uma sentença, um *statement* corresponde
 
 ### Bindings (variáveis)
 
-Para recuperar e gardar valores o JavaScript usa uma *binding* (ou variável):
+Para recuperar e guardar valores o JavaScript usa uma *binding* (ou variável):
 
 ```javascript
 let calc = 10 / 2;
 ```
 
-A ***keyword*** (palavra especial) `let` indica que esta sentença irá definir um binding (uma variável). Ele é seguido pelo nome da variável e, se quisermos atribuir um valor imediatamente, usuamos o operador `=` e uma expression ou um valor específico.
+A ***keyword*** (palavra especial) `let` indica que esta sentença irá definir um binding (uma variável). Ele é seguido pelo nome da variável e, se quisermos atribuir um valor imediatamente, usamos o operador `=` e uma expression ou um valor específico.
 
 No teste acima o *statement* cria uma variável `calc` e armazena o valor produzido pela expressão `10 / 2` sendo então 5 no fim das contas.
 
 Assim que uma variável é definida, seu nome já pode ser usado como uma expressão. 
 
-Quando uma variavel aponta para um valor, não significa que este valor será o mesmo sempre. O operador `=` pode ser usado a qualquer momento para alterar o valor de uma variável.
+Quando uma variável aponta para um valor, não significa que este valor será o mesmo sempre. O operador `=` pode ser usado a qualquer momento para alterar o valor de uma variável.
 
 ```javascript
 let clima = "ensolarado";
@@ -66,7 +68,7 @@ Nomes de variáveis não podem ter o mesmo nome de uma (*keyword*) palavra reser
 
 ### Functions (funções)
 
-Muito dos valores disponibilizados no ambiente default são do tipo *function*. Uma função é um pedaço de um programa encapsulado num valor. Esses valores podem ser *usados* para executar o programa encapsulado. Por exemplo, num ambiente de browser(navegador), a variável `prompt` contém uma função que mostra uma pequena caisa de diálogo solicitando um input do usuário. Ele é usado desta forma:
+Muito dos valores disponibilizados no ambiente default são do tipo *function*. Uma função é um pedaço de um programa encapsulado num valor. Esses valores podem ser *usados* para executar o programa encapsulado. Por exemplo, num ambiente de browser(navegador), a variável `prompt` contém uma função que mostra uma pequena caixa de diálogo solicitando um input do usuário. Ele é usado desta forma:
 
 ```javascript
 prompt("Digite sua senha")
@@ -110,7 +112,7 @@ O [próximo capítulo](https://github.com/gildoneto/estudando-javascript/blob/ma
 
 Quando seu programa contém mais de uma declaração (*statement*), as declarações são executadas de cima para baixo (*from top to bottom*).
 
-O programa abaixo tem duas declaracoes. A primeira pede um número ao usuário , e a segunda, que é executada depois da primeira, mostra a raíz quadrada do número digitado.
+O programa abaixo tem duas declarações. A primeira pede um número ao usuário , e a segunda, que é executada depois da primeira, mostra a raiz quadrada do número digitado.
 
 ````javascript
 let theNumber = Number(prompt("digite um numero"));
@@ -141,7 +143,7 @@ Nem todos os programas são estradas retas. Podemos, por exemplo, criar uma bifu
 <br>
 <br>
 
-Uma *execução condicional* é criada com a *keyword* `if` (*se*) no JavaScript. Sendo simplista, queremos que um determinado trecho de código seja executado se, e somente se, uma determinada condição for válida. Podemos, por exemplo, querer mostrar a raíz quadrada de um input apenas se ele for de fato um número.
+Uma *execução condicional* é criada com a *keyword* `if` (*se*) no JavaScript. Sendo simplista, queremos que um determinado trecho de código seja executado se, e somente se, uma determinada condição for válida. Podemos, por exemplo, querer mostrar a raiz quadrada de um input apenas se ele for de fato um número.
 
 ````javascript
 let theNumber = Number(prompt("Digite um número"));
@@ -151,7 +153,7 @@ console.log("O numero digitado é a raíz quadrada de " +
 }
 ````
 
-Com essa modificação, se você digitar **"Carangueijo"**, nenhum output é exibido. 
+Com essa modificação, se você digitar **"Caranguejo"**, nenhum output é exibido. 
 
 A *keyword* `if` executa ou ignora uma declaração (*statement*) dependendo do valor de uma expressão Booleana. A expressão decisiva é escrita depois da *keyword* `if`, entre parênteses, seguida de uma declaração para executar.
 
@@ -276,12 +278,74 @@ Este programa vai te forçar a digitar um nome. E irá solicitar isso de novo e 
 
 ### Identando o Código
 
-Nos exemplos acima, percebe-se que se é adicionado espaços na frente de [declarações][statement] 
+Nos exemplos acima, temos adicionado espaços na frente de [declarações][statement] que são parte de alguma outra declaração maior ainda. Esses espaços não são necessários, o computador irá aceitar o o programa normalmente sem eles. Na verdade, até as quebras de linha são opcionais. Você poderia escrever um programa inteiro usando apenas uma linha se você quisesse.
+
+A identação dentro de blocos tem o propósito de destacar a estrutura do código. Em códigos onde novos blocos são abertos dentro de outros blocos, pode ser difícil de ver onde um bloco termina e onde inicia. Com uma identação apropriada, a forma visual do programa corresponde com a forma dos blocos internos. Pode se usar dois espaços para cada bloco aberto, mas alguns programadores preferem 4 espaços, e outros caracteres de tabulação. O importante é que cada novo bloco tenha o mesmo padrão de identação.
+
+````javascript
+if (false != true) {
+  console.log("That makes sense.");
+  if (1 < 2) {
+    console.log("No surprise there.");
+  }
+}
+````
+
+A maioria dos editores de código tem opção de identação automática.
+
+
+
+### Loops For
+
+Muitos loops seguem o padrão mostrado nos exemplos de `while`. Primeiro o [binding][binding] `counter` é criado pra registrar o progresso do loop. Depois vem o loop `while`, normalmente com uma expressão de teste que checa se o contador alcançou seu valor final. No final do [body][body] do loop, o contador é atualizado pra registrar o progresso.
+
+Por causa desse padrao ser tao comum, o JavaScript e linguagens similares disponibilizam uma forma bem menor e mais compreensiva, o loop `for`.
+
+````javascript
+for (let number = 0; number <= 12; number = number + 2) {
+  console.log(number);
+}
+// → 0
+// → 2
+//   … etcetera
+````
+
+Este programa é equivalente ao exemplo onde exibimos os números pares. A única diferença é que todas as declarações que estão relacionadas ao "estado"(ou status do progresso) do loop são agrupados depois do `for`.
+
+Os parênteses depois da [keyword][keyword] `for` devem conter dois [semicolons][semicolon]. A parte antes do primeiro [semicolon][semicolon] *inicializa* o loop, geralmente definindo um [binding][binding]. A segunda parte é a expressão que checa se o loop deve continuar. A parte final atualiza o "estado" do loop a cada iteração. Pra maioria dos casos, essa é uma forma mais curta e clara que a estrutura de um `while`.
+
+Este é o código que calcula 2 elevado a décima potência usando um loop `for` ao invés do `while`:
+
+````javascript
+let result = 1;
+for (let counter = 0; counter < 10; counter = counter + 1) {
+  result = result * 2;
+}
+console.log(result);
+// → 1024
+````
+
+### Saindo de um Loop
+
+Uma condição que produz um valor `false` não é a única maneira de finalizar um loop. Existe uma expressão especial chamada `break` que tem o efeito de imediatamente sair do loop.
+
+Esse programa ilustra a [expressão][statement] `break`. Ele acha o primeiro número que seja ao mesmo tempo maior ou igual a 20 e também divisível por 7.
+
+````javascript
+for (let current = 20; ; current = current + 1) {
+  if (current % 7 == 0) {
+    console.log(current);
+    break;
+  }
+}
+// → 21
+````
 
 
 
 
-Em construção 👷 🚧 
+
+Em construção 👷 🚧  é
 
 <img src="" alt="linha reta" align="left"/>
 
