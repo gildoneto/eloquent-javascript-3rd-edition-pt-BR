@@ -2,7 +2,11 @@
 
 [Program Structure](https://eloquentjavascript.net/02_program_structure.html)
 
-Neste capítulo aprendemos:
+[binding]: ## "atribuir um nome a um trecho de código"
+[keyword]: ## "palavra reservada"
+[braces]: ## "chaves {}"
+[statement]: ## "statement"
+[control flow]: ## "controle de fluxo"
 
 ### Expressões e instruções (expressions and statements)
 
@@ -122,12 +126,12 @@ Aqui está uma representação esquemática bastante trivial do fluxo de control
 
 Nem todos os programas são estradas retas. Podemos, por exemplo, criar uma bifurcação , onde o programa escolhe automaticamente o caminho certo. Isto é chamado de *conditional execution* (execução condicional).
 
-<img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/3fbc72247f9d888265de03d0d07a781e98cacdb3/eloquent-javascript-3rd-edition/img/controlflow-if.svg" alt="linha reta" align="left"/>
+<img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/3fbc72247f9d888265de03d0d07a781e98cacdb3/eloquent-javascript-3rd-edition/img/controlflow-if.svg" alt="fluxo if" align="left"/>
 
 Uma *execução condicional* é criada com a *keyword* `if` (*se*) no JavaScript. Sendo simplista, queremos que um determinado trecho de código seja executado se, e somente se, uma determinada condição for válida. Podemos, por exemplo, querer mostrar a raíz quadrada de um input apenas se ele for de fato um número.
 
 ````javascript
-let theNumber = Number(prompt("digite um numero"));
+let theNumber = Number(prompt("Digite um número"));
 if (!Number.isNaN(theNumber)) {
 console.log("O numero digitado é a raíz quadrada de " +
             theNumber * theNumber);
@@ -140,7 +144,7 @@ A *keyword* `if` executa ou ignora uma declaração (*statement*) dependendo do 
 
 A função `Number.isNan` é nativa do JavaScript e somente retorna `true` se o argumento passado for `NaN` (not a number). A função `Number` retorna `NaN` quando você passa um argumento do tipo string, que não representa um número válido. Então, lemos o programa acima da seguinte forma: "somente se theNumber não seja um Not-a-Number, faça isso".
 
-A declaração depois do `if` está entre [chaves](a "braces")  ({ and }) neste exemplo. As [chaves](a "braces") podem ser usadas para agrupar várias declarações dentro de uma única [declaração](a "statement"), chamada de *block* (bloco). Você também pode omitir as [chaves](a "braces"), desde que seja uma única [declaração](a "statement"), mas pra evitar ter que pensar sobre quando as chaves são necessárias, a maioria dos programadores JavaScript usam as [chaves](a "braces") em cada bloco de código como esse. Este livro segue esse padrão, a não ser que a [declaração](a "statement") seja de apenas uma linha.
+A declaração depois do `if` está entre [braces][braces]  ({ and }) neste exemplo. As chaves podem ser usadas para agrupar várias declarações dentro de uma única [declaração][statement], chamada de *block* (bloco). Você também pode omitir as [braces][braces], desde que seja uma única [declaração][statement], mas pra evitar ter que pensar sobre quando as chaves são necessárias, a maioria dos programadores JavaScript usam [braces][braces] em cada bloco de código como esse. Este livro segue esse padrão, a não ser que a [declaração][statement] seja de apenas uma linha.
 
 ````javascript
 if (1 + 1 == 2) console.log("É verdade esse bilete"); 
@@ -149,11 +153,92 @@ if (1 + 1 == 2) console.log("É verdade esse bilete");
 
 Em vários casos você não terá um código que seja executado quando a condição não retornar como o esperado, seja o retorno`true` ou `false`.
 
-Esse caminho alternativo é representado pela segunda flexa no diagrama acima. Você pode usar a [keyword](a "palavra reservada") `else` junto com a `if` para criar dois caminhos separados de execução alternativa.
+Esse caminho alternativo é representado pela segunda flexa no diagrama acima. Você pode usar a [keyword][keyword] `else` junto com a `if` para criar dois caminhos separados de execução alternativa.
+
+````javascript
+let theNumber = Number(prompt("Digite um número"));
+if (!Number.isNaN(theNumber)) {
+  console.log("O numero digitado é a raíz quadrada de " +
+              theNumber * theNumber);
+} else {
+  console.log("Hey parça. Pq você não digitou um número?");
+}
+
+````
+
+Se você tem mais de dois caminhos para escolher, você pode encadear múltiplos pares de `if`/`else` juntos. Segue um exemplo:
+
+````javascript
+let num = Number(prompt("Digite um número"));
+
+if (num < 10) {
+  console.log("Pequeno");
+} else if (num < 100) {
+  console.log("Médio");
+} else {
+  console.log("Grande");
+}
+````
+
+O programa primeiro irá checar se `num` é menor que 10. Se for, ele segue esse caminho, exibe o texto "Pequeno" e encerra. Se não for menor que 10, ele e segue o `else`, que contém um segundo `if`. Se esta segunda condição *(num < 100)* for verdadeira, significa que o número é no mínimo 10 e no máximo 99, e o texto "Médio" será exibido. Se não, o segundo e último `else` é escolhido.
+
+O diagrama para esse programa poderia ser representado por essa figura:
+
+<img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/fbb1e4460a78e7fbc12230736fe71d712aaac715/eloquent-javascript-3rd-edition/img/controlflow-nested-if.svg" alt=" else if aninhados" align="left"/>
+
+### Loops While e Do
+
+Imagine um programa que exibe todos os números pares de 0 a 12. Uma forma de escrever isto é:
+
+````javascript
+console.log(0);
+console.log(2);
+console.log(4);
+console.log(6);
+console.log(8);
+console.log(10);
+console.log(12);
+````
+
+Funcionaria, mas a ideia de escrever um programa é justamente ter "menos" trabalho, não mais. Se precisássemos de todos os números pares menores que 1.000, o exemplo acima seria impraticável. O que precisamos é de uma forma de rodar um pedaço de código múltiplas vezes. Esta forma de [control flow][control flow] é chamada de **loop**.
+
+<img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/fbb1e4460a78e7fbc12230736fe71d712aaac715/eloquent-javascript-3rd-edition/img/controlflow-loop.svg" alt="loop" align="left"/>
+
+O controle de fluxo **Loop** nos permite voltar para certo ponto do programa onde estávamos antes e repete isso com nosso atual estado do programa. Se combinarmos isso com um [binding][binding] que faça uma contagem, podemos fazer algo parecido com isto: 
+
+````javascript
+let number = 0;
+while (number <= 12) {
+  console.log(number);
+  number = number + 2;
+}
+// → 0
+// → 2
+//   … etcetera
+````
+
+A [declaração][statement] que começa com a [keyword][keyword] `while` cria o **loop**. A palavra `while` é seguida por uma expressão em parênteses e logo após uma declaração bem parecida com o `if`. O **loop** segue executando a declaração até que a expressão produza um valor que retorna `true` quando convertido para booleano.
+
+O [binding][binding] `number` demonstra a forma como um binding pode acompanhar o progresso de um programa. Cada vez que o loop se repete, `number` recebe seu valor atual acrescido de 2. No começo de cada repetição, `number` é comparado com o número 12 para decidir quando trabalho desde programa será finalizado.
+
+Como um exemplo que de fato faz algo útil, agora podemos escrever um programa que calcula e mostra o valor de 2 elevado a 10 potência. Usamos 2 [bindings][binding]: um para acompanhar nosso resultado, e outro para contar quantas vezes multiplicaremos o `result` por 2. A cada iteração o loop testa se o [binding][binding] `counter` já alcançou o número 10, se não, atualiza os dois [bindings][binding].
+
+````javascript
+let result = 1;
+let counter = 0;
+while (counter < 10) {
+  result = result * 2;
+  counter = counter + 1;
+}
+console.log(result);
+// → 1024
+````
 
 
 
 Em construção 👷 🚧 
+
+This is a [TEST][binding]
 
 <img src="" alt="linha reta" align="left"/>
 
