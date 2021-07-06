@@ -18,9 +18,9 @@
 
 Uma *expression* é um fragmento de uma sentença que produz um valor. Cada valor que é definido literalmente como `99` ou `"Playstation"` é uma *expression*.
 
-Uma *expression* entre parênteses também é uma expressão, assim como um operador binário se aplicado a duas expressões ou um operador unario aplicado a uma. Ou seja, expression podem conter outras expressions aninhadas (*nested*).
+Uma *expression* entre parênteses também é uma expressão, assim como um operador binário se aplicado a duas expressões ou um operador unario aplicado a uma. Ou seja, expressões podem conter outras expressões aninhadas (*nested*).
 
-Se uma *expression* é um fragmento de uma sentença, um *statement* corresponde a sentença inteira. E um programa é uma lista de *statements*.
+Se uma *expressão* é um fragmento de uma sentença, um *statement* corresponde a sentença inteira. E um programa é uma lista de *statements*.
 
 ### Bindings (variáveis)
 
@@ -30,7 +30,7 @@ Para recuperar e guardar valores o JavaScript usa uma *binding* (ou variável):
 let calc = 10 / 2;
 ```
 
-A ***keyword*** (palavra especial) `let` indica que esta sentença irá definir um binding (uma variável). Ele é seguido pelo nome da variável e, se quisermos atribuir um valor imediatamente, usamos o operador `=` e uma expression ou um valor específico.
+A ***keyword*** (palavra especial) `let` indica que esta sentença irá definir um binding (uma variável). Ele é seguido pelo nome da variável e, se quisermos atribuir um valor imediatamente, usamos o operador `=` e uma expressão ou um valor específico.
 
 No teste acima o *statement* cria uma variável `calc` e armazena o valor produzido pela expressão `10 / 2` sendo então 5 no fim das contas.
 
@@ -355,8 +355,6 @@ A [keyword][keyword] `continue` é similar ao `break`, e influencia o progresso 
 
 ### Atualizando Bindings Sucintamente
 
-
-
 Especialmente durante um loop, um programa normalmente precisa atualizar um [binding][binding] para guardar um valor baseado no valor anterior deste mesmo binding.
 
 ````javascript
@@ -416,19 +414,73 @@ switch (prompt("What is the weather like?")) {
 
 Você pode colocar quantos [rótulos][label] `case` quiser dentro do bloco aberto pelo `switch`. O programa começará executando a partir do rótulo que corresponde com o valor dado ao `switch`, ou a partir do `default` se nenhum valor de comparação for encontrado. Ele continuará executando, mesmo entre outros rótulos, até encontrar uma expressão `break`. Em alguns rótulos `case`, assim como no "sunny", podem ser usados para compartilhar código entre [rótulos][label] `case` (ele recomenda sair de casa para os dois casos, sunny e cloudy). Mas tenha cuidado, é bastante comum esquecer de do `break`, o que fará com que o programa execute código que você não quer que seja executado.
 
-Em construção 👷 🚧  é
 
-<img src="" alt="linha reta" align="left"/>
 
-...
+### Capitalization
+
+Nomes de [binding][binding] não devem conter espaços, no entanto, muitas vezes é útil usar várias palavras para descrever claramente o que o [binding][binding] representa. Seguem as formas para atribuir nomes a um binding com várias palavras nele:
+
+````javascript
+fuzzylittleturtle
+fuzzy_little_turtle
+FuzzyLittleTurtle
+fuzzyLittleTurtle
+````
+
+O primeiro estilo pode ser difícil de ler. Eu prefiro algo parecido com o exemplo com underscores, mas é um estilo doloroso pra escrever. As funções padrão do JavaScript, e a maioria dos programadores, seguem o último exemplo. Eles deixam cada início de palavra maiúscula, exceto a primeira. Não é difícil se acostumar com pequenas coisas como essas, e um código com vários estilos diferentes de nomes pode ser bem estranho pra ler, então seguimos esta convenção.
+
+Em alguns casos, assim como a função `Number`, a primeira letra do binding também está maiuscula. Isso foi feito para marcar a função como um **construtor**. O que é um construtor vai ficar mais claro no  [capítulo 6](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/06-chapter-6-the-secret-life-of-objects.md). Por enquanto, tente não se chatear com essa aparente falta de consistência.
+
+
+
+### Comentários
+
+Com frequência, um código bruto não transmite toda informação que você quer que um programa transmita para leitores humanos, ou transmite isso de uma forma tão enigmática que as pessoas podem não entender. Em algum momento, você pode apenas incluir alguns pensamentos relacionados como parte do seu programa. É para isso que servem ‎os *‎**comentários‎***‎.‎
+
+Um comentário é um pedaço de texto que e parte de um programa, mas e completamente ignorado pelo computador. O JavaScript tem duas maneiras de escrever comentários. Para escrever um comentário de apenas uma linha, voce pode usar o caractere ***slash*** duas vezes `//` e então comentar o texto após isso.
+
+````javascript
+let accountBalance = calculateBalance(account);
+// It's a green hollow where a river sings
+accountBalance.adjust();
+// Madly catching white tatters in the grass.
+let report = new Report();
+// Where the sun on the proud mountain rings:
+addToReport(accountBalance, report);
+// It's a little valley, foaming like light in a glass.
+````
+
+Um comentário com "//" funciona apenas até o fim da linha. Uma seção de texto entre `/*` e `*/` será ignorado totalmente mesmo se houver quebra de linha. Isto é útil para adicionar blocos de informação sobre um arquivo ou um pedaço de programa.
+
+````javascript
+/* 
+  Eu encontrei este número pela primeira vez rabiscado nas costas de um antigo
+  caderno. Desde então, ele caiu muitas vezes, aparecendo em
+  números de telefone e os números de série dos produtos que eu
+  comprei. Ele obviamente gosta de mim, então decidi ficar com ele.
+*/
+const myNumber = 11213;
+````
+
+
+
+### Sumário 
+
+Agora você sabe que um programa é construído por [expressões][statement], que podem conter outras expressões. Expressões tendem a conter expressões, que podem ser construídas por expressões menores.
+
+Colocando expressões depois de outras formamos um programa que é executado de cima pra baixo (*from top to bottom*). Você pode introduzir alterações no [control flow][control flow] usando as expressões condicionais (`if`, `else` e `switch`) e expressões de loop (`while`, `do` e `for`).
+
+[Bindings][binding] podem ser usados para atribuir pedaços de dados a um nome, e eles são úteis para acompanhar estados em seu programa. O ambiente é um conjunto de bindings que são definidos. Sistemas JavaScript carregam consigo um conjunto de bindings padrão que podem ser usados dentro de seu ambiente.
+
+Funções são valores especiais que encapsulam uma parte de programa. Você pode invocá-los escrevendo `nomeDaFuncao(argument1, argument2)`. Essa chamada de função é uma expressão e pode produzir um valor.
 
 # Exercícios 
 
 Os exercícios abaixo são propostos pelo autor, abordando o que foi aprendido nos capítulos 1 e 2.
 
-[Clicando aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md) você pode ler e tentar fazer os exercícios da segunda edição traduzida pela BrazilJS.
+[Clicando aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md) você pode ler e fazer os exercícios da segunda edição traduzida pela BrazilJS.
 
-Tente fazer os exercícios e depois volte aqui para checar minhas respostas comentadas e as respostas do autor.
+Clicando abaixo, você irá para a página com os exercícios respondidos referente ao primeiro e segundo capítulo:
 
 ### [Exercícios respondidos](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/22-exercises-chapters-1-and-2.md) ⬅
 
