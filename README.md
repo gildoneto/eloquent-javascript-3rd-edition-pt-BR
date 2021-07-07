@@ -15,9 +15,9 @@ De qualquer forma a [BrazilJS](https://www.braziljs.org/about) já disponibiliza
 
 Cada tópico abaixo refere-se a um breve resumo de cada capítulo e logo baixo os desafios respondidos. Portanto, estes resumos não substituem a leitura do mesmo. Beleza? Então simbora!
 
-> STATUS DE ANDAMENTO DO RESUMO DO ELOQUENT JAVASCRIPT: **5%**
+> STATUS DE ANDAMENTO DO RESUMO DO ELOQUENT JAVASCRIPT: **10%**
 
-<details><summary> Expanda para ver o link dos capitulos </summary>
+<details><summary> ⬅ EXPANDA PARA VISUALIZAR O SUMÁRIO </summary>
   <p>
 
 - [Capitulo 1 - Valores, Tipos e Operadores](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/01-chapter-1-values-types-operators.md)
