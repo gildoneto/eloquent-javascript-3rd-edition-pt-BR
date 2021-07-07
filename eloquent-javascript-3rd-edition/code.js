@@ -35,29 +35,28 @@ while (number <= 100){
 // the code below was written by @gildoneto - 01/06/2021
 
 let space = " ", hash= "#", line = "\n";
-let tam = 8;
+let size = 8;
 let xadrez = "";
 let linhaPar = "";
 let linhaImpar = "";
-    for (let i = 0; i < tam; i++){
-      if (i % 2 == 0){
-          linhaPar = linhaPar + space;
-          linhaImpar = linhaImpar + hash;
-      }
-      else {
-          linhaPar = linhaPar + hash;
-          linhaImpar = linhaImpar + space;
-      }
+
+for (let i = 0; i < size; i++){
+    if (i % 2 == 0){
+        linhaPar = linhaPar + space;
+        linhaImpar = linhaImpar + hash;
+    } else {
+        linhaPar = linhaPar + hash;
+        linhaImpar = linhaImpar + space;
     }
-	
-	for (let i = 0; i < tam; i++){
+}
+
+for (let i = 0; i < size; i++){
     if (i % 2 == 1){
-          xadrez = xadrez + linhaPar + line;
-      }
-      else {
-      		xadrez = xadrez + linhaImpar + line;
-      }
+        xadrez = xadrez + linhaPar + line;
+    } else {
+        xadrez = xadrez + linhaImpar + line;
     }
+}
 console.log(xadrez);
 
 /* ######################################################## */
