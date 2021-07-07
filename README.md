@@ -17,7 +17,7 @@ Cada tópico abaixo refere-se a um breve resumo de cada capítulo e logo baixo o
 
 > STATUS DE ANDAMENTO DO RESUMO DO ELOQUENT JAVASCRIPT: **10%**
 
-<details><summary> ⬅ EXPANDA PARA VISUALIZAR O SUMÁRIO </summary>
+<details><summary> 👉🏽 <strong>CLIQUE AQUI PARA VISUALIZAR O SUMÁRIO</strong> 👈🏽 </summary>
   <p>
 
 - [Capitulo 1 - Valores, Tipos e Operadores](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/01-chapter-1-values-types-operators.md)
