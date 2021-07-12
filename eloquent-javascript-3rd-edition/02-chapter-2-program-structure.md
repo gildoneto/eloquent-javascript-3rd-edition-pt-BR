@@ -112,9 +112,9 @@ O [próximo capítulo](https://github.com/gildoneto/estudando-javascript/blob/ma
 
 ### Controle de Fluxo
 
-Quando seu programa contém mais de uma declaração (*statement*), as declarações são executadas de cima para baixo (*from top to bottom*).
+Quando seu programa contém mais de uma sentença (*statement*), as sentenças são executadas de cima para baixo (*from top to bottom*).
 
-O programa abaixo tem duas declarações. A primeira pede um número ao usuário , e a segunda, que é executada depois da primeira, mostra a raiz quadrada do número digitado.
+O programa abaixo tem duas sentenças. A primeira pede um número ao usuário , e a segunda, que é executada depois da primeira, mostra a raiz quadrada do número digitado.
 
 ````javascript
 let theNumber = Number(prompt("digite um numero"));
@@ -157,11 +157,11 @@ console.log("O numero digitado é a raíz quadrada de " +
 
 Com essa modificação, se você digitar **"Caranguejo"**, nenhum output é exibido. 
 
-A *keyword* `if` executa ou ignora uma declaração (*statement*) dependendo do valor de uma expressão Booleana. A expressão decisiva é escrita depois da *keyword* `if`, entre parênteses, seguida de uma declaração para executar.
+A *keyword* `if` executa ou ignora uma sentença (*statement*) dependendo do valor de uma expressão Booleana. A expressão decisiva é escrita depois da *keyword* `if`, entre parênteses, seguida de uma sentença para executar.
 
 A função `Number.isNan` é nativa do JavaScript e somente retorna `true` se o argumento passado for `NaN` (not a number). A função `Number` retorna `NaN` quando você passa um argumento do tipo string, que não representa um número válido. Então, lemos o programa acima da seguinte forma: "somente se theNumber não seja um Not-a-Number, faça isso".
 
-A declaração depois do `if` está entre [braces][braces]  ({ and }) neste exemplo. As chaves podem ser usadas para agrupar várias declarações dentro de uma única [declaração][statement], chamada de *block* (bloco). Você também pode omitir as [braces][braces], desde que seja uma única [declaração][statement], mas pra evitar ter que pensar sobre quando as chaves são necessárias, a maioria dos programadores JavaScript usam [braces][braces] em cada bloco de código como esse. Este livro segue esse padrão, a não ser que a [declaração][statement] seja de apenas uma linha.
+A sentença depois do `if` está entre [braces][braces]  ({ and }) neste exemplo. As chaves podem ser usadas para agrupar várias sentenças dentro de uma única [sentença][statement], chamada de *block* (bloco). Você também pode omitir as [braces][braces], desde que seja uma única [sentença][statement], mas pra evitar ter que pensar sobre quando as chaves são necessárias, a maioria dos programadores JavaScript usam [braces][braces] em cada bloco de código como esse. Este livro segue esse padrão, a não ser que a [sentença][statement] seja de apenas uma linha.
 
 ````javascript
 if (1 + 1 == 2) console.log("É verdade esse bilete"); 
@@ -245,7 +245,7 @@ while (number <= 12) {
 //   … etcetera
 ````
 
-A [declaração][statement] que começa com a [keyword][keyword] `while` cria o **loop**. A palavra `while` é seguida por uma expressão em parênteses e logo após uma declaração bem parecida com o `if`. O **loop** segue executando a declaração até que a expressão produza um valor que retorna `true` quando convertido para Booleano.
+A [sentença][statement] que começa com a [keyword][keyword] `while` cria o **loop**. A palavra `while` é seguida por uma expressão em parênteses e logo após uma sentença bem parecida com o `if`. O **loop** segue executando a sentença até que a expressão produza um valor que retorna `true` quando convertido para Booleano.
 
 O [binding][binding] `number` demonstra a forma como um binding pode acompanhar o progresso de um programa. Cada vez que o loop se repete, `number` recebe seu valor atual acrescido de 2. No começo de cada repetição, `number` é comparado com o número 12 para decidir quando trabalho desde programa será finalizado.
 
@@ -280,7 +280,7 @@ Este programa vai te forçar a digitar um nome. E irá solicitar isso de novo e 
 
 ### Identando o Código
 
-Nos exemplos acima, temos adicionado espaços na frente de [declarações][statement] que são parte de alguma outra declaração maior ainda. Esses espaços não são necessários, o computador irá aceitar o o programa normalmente sem eles. Na verdade, até as quebras de linha são opcionais. Você poderia escrever um programa inteiro usando apenas uma linha se você quisesse.
+Nos exemplos acima, temos adicionado espaços na frente de [sentenças][statement] que são parte de alguma outra sentença maior ainda. Esses espaços não são necessários, o computador irá aceitar o o programa normalmente sem eles. Na verdade, até as quebras de linha são opcionais. Você poderia escrever um programa inteiro usando apenas uma linha se você quisesse.
 
 A identação dentro de blocos tem o propósito de destacar a estrutura do código. Em códigos onde novos blocos são abertos dentro de outros blocos, pode ser difícil de ver onde um bloco termina e onde inicia. Com uma identação apropriada, a forma visual do programa corresponde com a forma dos blocos internos. Pode se usar dois espaços para cada bloco aberto, mas alguns programadores preferem 4 espaços, e outros caracteres de tabulação. O importante é que cada novo bloco tenha o mesmo padrão de identação.
 
@@ -312,7 +312,7 @@ for (let number = 0; number <= 12; number = number + 2) {
 //   … etcetera
 ````
 
-Este programa é equivalente ao exemplo onde exibimos os números pares. A única diferença é que todas as declarações que estão relacionadas ao "estado"(ou status do progresso) do loop são agrupados depois do `for`.
+Este programa é equivalente ao exemplo onde exibimos os números pares. A única diferença é que todas as sentenças que estão relacionadas ao "estado"(ou status do progresso) do loop são agrupados depois do `for`.
 
 Os parênteses depois da [keyword][keyword] `for` devem conter dois [semicolons][semicolon]. A parte antes do primeiro [semicolon][semicolon] *inicializa* o loop, geralmente definindo um [binding][binding]. A segunda parte é a expressão que checa se o loop deve continuar. A parte final atualiza o "estado" do loop a cada iteração. Pra maioria dos casos, essa é uma forma mais curta e clara que a estrutura de um `while`.
 
