@@ -2,35 +2,34 @@
 
 [Program Structure](https://eloquentjavascript.net/02_program_structure.html)
 
-[binding]: ## "atribuir um nome a um trecho de código"
+[binding]: ## "binding"
 [keyword]: ## "palavra reservada"
 [braces]: ## "chaves {}"
 [statement]: ## "statement"
 [control flow]: ## "controle de fluxo"
-
 [body]: ## "corpo"
 [block]: ## "bloco"
 [semicolon]: ## "ponto e vírgula ;"
 [remainder]: ## "resto da divisão %"
 [label]: ## "label"
 
-### Expressões e instruções (expressions and statements)
+### Expressões e Instruções (Expressions and Statements)
 
-Uma *expression* é um fragmento de uma sentença que produz um valor. Cada valor que é definido literalmente como `99` ou `"Playstation"` é uma *expression*.
+Uma *expressão* é um fragmento de uma instrução que produz um valor. Cada valor que é definido literalmente como `99` ou `"Playstation"` é uma *expressão*.
 
-Uma *expression* entre parênteses também é uma expressão, assim como um operador binário se aplicado a duas expressões ou um operador unario aplicado a uma. Ou seja, expressões podem conter outras expressões aninhadas (*nested*).
+Uma *expressão* entre parênteses também é uma expressão, assim como um operador binário se aplicado a duas expressões ou um operador unario aplicado a uma. Ou seja, expressões podem conter outras expressões aninhadas (*nested*).
 
-Se uma *expressão* é um fragmento de uma sentença, um *statement* corresponde a sentença inteira. E um programa é uma lista de *statements*.
+Se uma *expressão* é um fragmento de uma instrução, um *statement* corresponde a instrução inteira. E um programa é uma lista de *statements*.
 
-### Bindings (variáveis)
+### Bindings (Variáveis)
 
-Para recuperar e guardar valores o JavaScript usa uma *binding* (ou variável):
+Para recuperar e guardar valores o JavaScript usa uma *variável* (variável):
 
 ```javascript
 let calc = 10 / 2;
 ```
 
-A ***keyword*** (palavra especial) `let` indica que esta sentença irá definir um binding (uma variável). Ele é seguido pelo nome da variável e, se quisermos atribuir um valor imediatamente, usamos o operador `=` e uma expressão ou um valor específico.
+A ***keyword*** (palavra reservada) `let` indica que esta instrução irá definir uma variável (uma variável). Ele é seguido pelo nome da variável e, se quisermos atribuir um valor imediatamente, usamos o operador `=` e uma expressão ou um valor específico.
 
 No teste acima o *statement* cria uma variável `calc` e armazena o valor produzido pela expressão `10 / 2` sendo então 5 no fim das contas.
 
@@ -58,7 +57,7 @@ console.log(word2 + word1);
 
 A palavra `var` (abreviação de variável) era usada para declarar bindings no JavaScript antes de 2015, isso é melhor explicado no capítulo 3 Funções.
 
-A palavra `const` (abreviação de constante) define um binding constante que aponta sempre para o mesmo valor. Não é possível a alteração após sua declaração.
+A palavra `const` (abreviação de constante) define uma variável constante que aponta sempre para o mesmo valor. Não é possível a alteração após sua declaração.
 
 ### Biding Names (nomes de variáveis)
 
@@ -88,7 +87,7 @@ A função `prompt` não é mais usada no programação web moderna, principalme
 
 A maioria dos sistemas JavaScript (incluindo todos os navegadores modernos e o Node.js) disponibilizam a função `console.log` que exibe os argumentos passados na chamada com um output de texto. Nos navegadores, esse output fica no console JavaScript, que por padrão fica escondido, mas a maioria deles exibe o console apenas pressionando a tecla F12, se não funcionar, procure algo no menu relacionado a Developer Tools.
 
-Apesar do `console.log` ter um ponto, funções não podem conter esse caractere `.` , isso ocorre porque ele não é um binding simples. Isto na verdade é uma expressão que acessa a propriedade `log` do objeto `console`. Isso vai ser melhor explicado no [Capítulo 4](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/04-chapter-4-data-structures-objects-and-arrays.md).
+Apesar do `console.log` ter um ponto, funções não podem conter esse caractere `.` , isso ocorre porque ele não é uma variável simples. Isto na verdade é uma expressão que acessa a propriedade `log` do objeto `console`. Isso vai ser melhor explicado no [Capítulo 4](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/04-chapter-4-data-structures-objects-and-arrays.md).
 
 ### Retornando Valores
 
@@ -112,9 +111,9 @@ O [próximo capítulo](https://github.com/gildoneto/estudando-javascript/blob/ma
 
 ### Controle de Fluxo
 
-Quando seu programa contém mais de uma sentença (*statement*), as sentenças são executadas de cima para baixo (*from top to bottom*).
+Quando seu programa contém mais de uma instrução (*statement*), as instruções são executadas de cima para baixo (*from top to bottom*).
 
-O programa abaixo tem duas sentenças. A primeira pede um número ao usuário , e a segunda, que é executada depois da primeira, mostra a raiz quadrada do número digitado.
+O programa abaixo tem duas instruções. A primeira pede um número ao usuário , e a segunda, que é executada depois da primeira, mostra a raiz quadrada do número digitado.
 
 ````javascript
 let theNumber = Number(prompt("digite um numero"));
@@ -157,11 +156,11 @@ console.log("O numero digitado é a raíz quadrada de " +
 
 Com essa modificação, se você digitar **"Caranguejo"**, nenhum output é exibido. 
 
-A *keyword* `if` executa ou ignora uma sentença (*statement*) dependendo do valor de uma expressão Booleana. A expressão decisiva é escrita depois da *keyword* `if`, entre parênteses, seguida de uma sentença para executar.
+A *keyword* `if` executa ou ignora uma instrução (*statement*) dependendo do valor de uma expressão Booleana. A expressão decisiva é escrita depois da *keyword* `if`, entre parênteses, seguida de uma instrução para executar.
 
 A função `Number.isNan` é nativa do JavaScript e somente retorna `true` se o argumento passado for `NaN` (not a number). A função `Number` retorna `NaN` quando você passa um argumento do tipo string, que não representa um número válido. Então, lemos o programa acima da seguinte forma: "somente se theNumber não seja um Not-a-Number, faça isso".
 
-A sentença depois do `if` está entre [braces][braces]  ({ and }) neste exemplo. As chaves podem ser usadas para agrupar várias sentenças dentro de uma única [sentença][statement], chamada de *block* (bloco). Você também pode omitir as [braces][braces], desde que seja uma única [sentença][statement], mas pra evitar ter que pensar sobre quando as chaves são necessárias, a maioria dos programadores JavaScript usam [braces][braces] em cada bloco de código como esse. Este livro segue esse padrão, a não ser que a [sentença][statement] seja de apenas uma linha.
+A instrução depois do `if` está entre [braces][braces]  ({ and }) neste exemplo. As chaves podem ser usadas para agrupar várias instruções dentro de uma única [instrução][statement], chamada de *block* (bloco). Você também pode omitir as [braces][braces], desde que seja uma única [instrução][statement], mas pra evitar ter que pensar sobre quando as chaves são necessárias, a maioria dos programadores JavaScript usam [braces][braces] em cada bloco de código como esse. Este livro segue esse padrão, a não ser que a [instrução][statement] seja de apenas uma linha.
 
 ````javascript
 if (1 + 1 == 2) console.log("É verdade esse bilete"); 
@@ -232,7 +231,7 @@ Funcionaria, mas a ideia de escrever um programa é justamente ter "menos" traba
 <br>
 <br>
 
-O controle de fluxo **Loop** nos permite voltar para certo ponto do programa onde estávamos antes e repete isso com nosso atual estado do programa. Se combinarmos isso com um [binding][binding] que faça uma contagem, podemos fazer algo parecido com isto: 
+O controle de fluxo **Loop** nos permite voltar para certo ponto do programa onde estávamos antes e repete isso com nosso atual estado do programa. Se combinarmos isso com uma [variável][binding] que faça uma contagem, podemos fazer algo parecido com isto: 
 
 ````javascript
 let number = 0;
@@ -245,11 +244,11 @@ while (number <= 12) {
 //   … etcetera
 ````
 
-A [sentença][statement] que começa com a [keyword][keyword] `while` cria o **loop**. A palavra `while` é seguida por uma expressão em parênteses e logo após uma sentença bem parecida com o `if`. O **loop** segue executando a sentença até que a expressão produza um valor que retorna `true` quando convertido para Booleano.
+A [instrução][statement] que começa com a [keyword][keyword] `while` cria o **loop**. A palavra `while` é seguida por uma expressão em parênteses e logo após uma instrução bem parecida com o `if`. O **loop** segue executando a instrução até que a expressão produza um valor que retorna `true` quando convertido para Booleano.
 
-O [binding][binding] `number` demonstra a forma como um binding pode acompanhar o progresso de um programa. Cada vez que o loop se repete, `number` recebe seu valor atual acrescido de 2. No começo de cada repetição, `number` é comparado com o número 12 para decidir quando trabalho desde programa será finalizado.
+A [variável][binding] `number` demonstra a forma como uma variável pode acompanhar o progresso de um programa. Cada vez que o loop se repete, `number` recebe seu valor atual acrescido de 2. No começo de cada repetição, `number` é comparado com o número 12 para decidir quando trabalho desde programa será finalizado.
 
-Como um exemplo que de fato faz algo útil, agora podemos escrever um programa que calcula e mostra o valor de 2 elevado a 10 potência. Usamos 2 [bindings][binding]: um para acompanhar nosso resultado, e outro para contar quantas vezes multiplicaremos o `result` por 2. A cada iteração o loop testa se o [binding][binding] `counter` já alcançou o número 10, se não, atualiza os dois [bindings][binding].
+Como um exemplo que de fato faz algo útil, agora podemos escrever um programa que calcula e mostra o valor de 2 elevado a 10 potência. Usamos duas [variáveis][binding]: uma para acompanhar nosso resultado, e outra para contar quantas vezes multiplicaremos o `result` por 2. A cada iteração o loop testa se a [variável][binding] `counter` já alcançou o número 10, se não, atualiza as duas [variáveis][binding].
 
 ````javascript
 let result = 1;
@@ -280,7 +279,7 @@ Este programa vai te forçar a digitar um nome. E irá solicitar isso de novo e 
 
 ### Identando o Código
 
-Nos exemplos acima, temos adicionado espaços na frente de [sentenças][statement] que são parte de alguma outra sentença maior ainda. Esses espaços não são necessários, o computador irá aceitar o o programa normalmente sem eles. Na verdade, até as quebras de linha são opcionais. Você poderia escrever um programa inteiro usando apenas uma linha se você quisesse.
+Nos exemplos acima, temos adicionado espaços na frente de [instruções][statement] que são parte de alguma outra instrução maior ainda. Esses espaços não são necessários, o computador irá aceitar o o programa normalmente sem eles. Na verdade, até as quebras de linha são opcionais. Você poderia escrever um programa inteiro usando apenas uma linha se você quisesse.
 
 A identação dentro de blocos tem o propósito de destacar a estrutura do código. Em códigos onde novos blocos são abertos dentro de outros blocos, pode ser difícil de ver onde um bloco termina e onde inicia. Com uma identação apropriada, a forma visual do programa corresponde com a forma dos blocos internos. Pode se usar dois espaços para cada bloco aberto, mas alguns programadores preferem 4 espaços, e outros caracteres de tabulação. O importante é que cada novo bloco tenha o mesmo padrão de identação.
 
@@ -299,7 +298,7 @@ A maioria dos editores de código tem opção de identação automática.
 
 ### Loops For
 
-Muitos loops seguem o padrão mostrado nos exemplos de `while`. Primeiro o [binding][binding] `counter` é criado pra registrar o progresso do loop. Depois vem o loop `while`, normalmente com uma expressão de teste que checa se o contador alcançou seu valor final. No final do [body][body] do loop, o contador é atualizado pra registrar o progresso.
+Muitos loops seguem o padrão mostrado nos exemplos de `while`. Primeiro a [variável][binding] `counter` é criada pra registrar o progresso do loop. Depois vem o loop `while`, normalmente com uma expressão de teste que checa se o contador alcançou seu valor final. No final do [body][body] do loop, o contador é atualizado pra registrar o progresso.
 
 Por causa desse padrao ser tao comum, o JavaScript e linguagens similares disponibilizam uma forma bem menor e mais compreensiva, o loop `for`.
 
@@ -312,9 +311,9 @@ for (let number = 0; number <= 12; number = number + 2) {
 //   … etcetera
 ````
 
-Este programa é equivalente ao exemplo onde exibimos os números pares. A única diferença é que todas as sentenças que estão relacionadas ao "estado"(ou status do progresso) do loop são agrupados depois do `for`.
+Este programa é equivalente ao exemplo onde exibimos os números pares. A única diferença é que todas as instruções que estão relacionadas ao "estado"(ou status do progresso) do loop são agrupados depois do `for`.
 
-Os parênteses depois da [keyword][keyword] `for` devem conter dois [semicolons][semicolon]. A parte antes do primeiro [semicolon][semicolon] *inicializa* o loop, geralmente definindo um [binding][binding]. A segunda parte é a expressão que checa se o loop deve continuar. A parte final atualiza o "estado" do loop a cada iteração. Pra maioria dos casos, essa é uma forma mais curta e clara que a estrutura de um `while`.
+Os parênteses depois da [keyword][keyword] `for` devem conter dois [semicolons][semicolon]. A parte antes do primeiro [semicolon][semicolon] *inicializa* o loop, geralmente definindo uma [variável][binding]. A segunda parte é a expressão que checa se o loop deve continuar. A parte final atualiza o "estado" do loop a cada iteração. Pra maioria dos casos, essa é uma forma mais curta e clara que a estrutura de um `while`.
 
 Este é o código que calcula 2 elevado a décima potência usando um loop `for` ao invés do `while`:
 
@@ -355,7 +354,7 @@ A [keyword][keyword] `continue` é similar ao `break`, e influencia o progresso 
 
 ### Atualizando Bindings Sucintamente
 
-Especialmente durante um loop, um programa normalmente precisa atualizar um [binding][binding] para guardar um valor baseado no valor anterior deste mesmo binding.
+Especialmente durante um loop, um programa normalmente precisa atualizar uma [variável][binding] para guardar um valor baseado no valor anterior desta mesma variável.
 
 ````javascript
 counter = counter + 1;
@@ -418,7 +417,7 @@ Você pode colocar quantos [rótulos][label] `case` quiser dentro do bloco abert
 
 ### Capitalization
 
-Nomes de [binding][binding] não devem conter espaços, no entanto, muitas vezes é útil usar várias palavras para descrever claramente o que o [binding][binding] representa. Seguem as formas para atribuir nomes a um binding com várias palavras nele:
+Nomes de [variáveis][binding] não devem conter espaços, no entanto, muitas vezes é útil usar várias palavras para descrever claramente o que a [variável][binding] representa. Seguem as formas para atribuir nomes a uma variável com várias palavras nele:
 
 ````javascript
 fuzzylittleturtle
@@ -470,7 +469,7 @@ Agora você sabe que um programa é construído por [expressões][statement], qu
 
 Colocando expressões depois de outras formamos um programa que é executado de cima pra baixo (*from top to bottom*). Você pode introduzir alterações no [control flow][control flow] usando as expressões condicionais (`if`, `else` e `switch`) e expressões de loop (`while`, `do` e `for`).
 
-[Bindings][binding] podem ser usados para atribuir pedaços de dados a um nome, e eles são úteis para acompanhar estados em seu programa. O ambiente é um conjunto de bindings que são definidos. Sistemas JavaScript carregam consigo um conjunto de bindings padrão que podem ser usados dentro de seu ambiente.
+[Variáveis][binding] podem ser usadas para atribuir pedaços de dados a um nome, e elas são úteis para acompanhar estados em seu programa. O ambiente é um conjunto de variáveis que são definidas. Sistemas JavaScript carregam consigo um conjunto de variáveis padrão que podem ser usadas dentro de seu ambiente.
 
 Funções são valores especiais que encapsulam uma parte de programa. Você pode invocá-los escrevendo `nomeDaFuncao(argument1, argument2)`. Essa chamada de função é uma expressão e pode produzir um valor.
 
