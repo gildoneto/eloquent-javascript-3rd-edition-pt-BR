@@ -23,7 +23,7 @@ Cada tópico abaixo refere-se a um breve resumo de cada capítulo e logo baixo o
 - [Capítulo 1 - Valores, Tipos e Operadores](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/01-chapter-1-values-types-operators.md)
 
 - [Capítulo 2 - Estrutura do Programa](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/02-chapter-2-program-structure.md)
-  - [Exercícios Capítulos 1 e 2](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/22-exercises-chapters-1-and-2.md)
+  - [Exercícios Capítulos 2](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/22-exercises-chapter-2.md)
 
 - [Capítulo 3 - Funções](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/03-chapter-3-functions.md)
   - [Exercícios Capítulo 3](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/23-exercises-chapter-3.md)
