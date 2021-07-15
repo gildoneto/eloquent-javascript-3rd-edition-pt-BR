@@ -9,7 +9,7 @@
 [keyword]: ## "palavra reservada"
 [lexical]: ## "Lexical Scoping"
 [declaration]: ## "declaration"
-[arrow]: ## "flexa =>"
+[arrow]: ## "flecha=>"
 [stack]: ## "call stack"
 
 
@@ -107,7 +107,7 @@ console.log(n);
 
 JavaScript distingue não apenas as [variáveis][binding] ***global*** e ***local***. Blocos e funções podem ser criados dentro de outros blocos e funções, produzindo múltiplos níveis de localidade.
 
-Por exemplo, esta função, que exibe os ingredientes necessários para fazer um pasta de humus, tem uma outra função dentro dela:
+Por exemplo, esta função, que exibe os ingredientes necessários para fazer um pasta de húmus, tem uma outra função dentro dela:
 
 ````javascript
 const hummus = function(factor) {
@@ -190,7 +190,7 @@ const power = (base, exponent) => {
 };
 ````
 
-A [flexa][arrow] vem depois da lista de parâmetros e é seguida pelo [corpo][body] da função. Deve ser lido da seguinte forma: "este input *(os parâmetros)* produz este resultado *(o corpo)*".
+A [flecha][arrow] vem depois da lista de parâmetros e é seguida pelo [corpo][body] da função. Deve ser lido da seguinte forma: "este input *(os parâmetros)* produz este resultado *(o corpo)*".
 
 Quando existe apenas um parâmetro, você pode omitir os parênteses ao redor da lista de parâmetros. Se o corpo for uma expressão única, ao invés de um bloco de [chaves][braces], essa expressão será retornada pela função. Logo, essas duas definições de `square` fazem a mesma coisa:
 
@@ -545,8 +545,35 @@ Mesmo assim, não há necessidade de se sentir mal ao escrever funções que nã
 
 
 
-Em construção 👷 🚧 é sentença
+### Resumo
 
+Este capítulo te mostrou como escrever suas próprias funções. A keyword `function`, quando usada como uma expressão, pode criar um valor de função. Quando usado como uma instrução, pode ser usado para declarar uma variável e dar a ela uma função como seu valor. **Arrow Functions** são outra forma de criar funções.
 
+````javascript
+// Define f para guardar um valor de função
+const f = function(a) {
+  console.log(a + 2);
+};
 
-<!-- <img src="" alt="linha reta" align="left"/> --> 
+// Declara g como uma função
+function g(a, b) {
+  return a * b * 3.5;
+}
+
+// Um valor de função menos verboso(detalhado)
+let h = a => a % 3;
+````
+
+Um aspecto fundamental para compreender as funções é compreender os escopos. Cada bloco cria um novo escopo. Os parâmetros e variáveis declaradas em um determinado escopo são locais e não visíveis do lado de fora. As variáveis declaradas com `var` se comportam de maneira diferente - elas acabam no escopo de função mais próximo ou no escopo global.
+
+É útil separar as tarefas que seu programa executa em funções diferentes. Você não terá que se repetir tanto, e as funções podem ajudar a organizar um programa, agrupando o código em partes que fazem coisas específicas.
+
+# Exercícios 
+
+Os exercícios abaixo são propostos pelo autor, abordando o que foi aprendido no capítulo 3.
+
+[Clicando aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/03-funcoes.md) você pode ler e fazer os exercícios da segunda edição traduzida pela BrazilJS.
+
+Referente a terceira edição do livro, clicando abaixo você irá para a página com os exercícios referente a este capítulo:
+
+### [Exercícios - #3rd Edition](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/23-exercises-chapter-3.md) ⬅

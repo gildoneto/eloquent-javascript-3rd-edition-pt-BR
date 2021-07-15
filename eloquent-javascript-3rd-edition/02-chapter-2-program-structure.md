@@ -75,7 +75,7 @@ Muito dos valores disponibilizados no ambiente default são do tipo *function*. 
 prompt("Digite sua senha")
 ```
 
-<img src="https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/img/prompt.png?raw=true" alt="Prompt do Edge" width="400" />
+<img src="https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/img/prompt.png?raw=true" alt="Prompt do Edge" width="400" />
 
 O ato de executar uma função é chamada de *invoking*, *calling*, or *applying it*. Em português uso muito a palavra "chamar". Você pode *chamar* uma função colocando um parênteses depois da expressão que dá nome a ela. Normalmente você irá chamar diretamente o nome da variável que contém a função. Os valores entre os parênteses são levados para o programa dentro da função. No exemplo acima, a função `prompt` usa a string que passamos como um texto a ser exibido no dialog box. Valores dados a funções são chamados de *arguments*. As funções podem ter mais de um argumento e também mais de um tipo de argumento.
 
@@ -87,7 +87,7 @@ A função `prompt` não é mais usada no programação web moderna, principalme
 
 A maioria dos sistemas JavaScript (incluindo todos os navegadores modernos e o Node.js) disponibilizam a função `console.log` que exibe os argumentos passados na chamada com um output de texto. Nos navegadores, esse output fica no console JavaScript, que por padrão fica escondido, mas a maioria deles exibe o console apenas pressionando a tecla F12, se não funcionar, procure algo no menu relacionado a Developer Tools.
 
-Apesar do `console.log` ter um ponto, funções não podem conter esse caractere `.` , isso ocorre porque ele não é uma variável simples. Isto na verdade é uma expressão que acessa a propriedade `log` do objeto `console`. Isso vai ser melhor explicado no [Capítulo 4](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/04-chapter-4-data-structures-objects-and-arrays.md).
+Apesar do `console.log` ter um ponto, funções não podem conter esse caractere `.` , isso ocorre porque ele não é uma variável simples. Isto na verdade é uma expressão que acessa a propriedade `log` do objeto `console`. Isso vai ser melhor explicado no [Capítulo 4](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/04-chapter-4-data-structures-objects-and-arrays.md).
 
 ### Retornando Valores
 
@@ -105,7 +105,7 @@ console.log(Math.min(3, 9) + 7)
 // → 10
 ````
 
-O [próximo capítulo](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/03-chapter-3-functions.md) explica melhor como escrever suas próprias funções.
+O [próximo capítulo](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/03-chapter-3-functions.md) explica melhor como escrever suas próprias funções.
 
 
 
@@ -261,7 +261,7 @@ console.log(result);
 // → 1024
 ````
 
-O contador também poderia começar com o valor 1 e checar por menor ou igual a 10 (<= 10), mas por razões que serão discutidas no [Capítulo 4](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/04-chapter-4-data-structures-objects-and-arrays.md), é sempre uma boa ideia se acostumar a iniciar o contador por 0.
+O contador também poderia começar com o valor 1 e checar por menor ou igual a 10 (<= 10), mas por razões que serão discutidas no [Capítulo 4](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/04-chapter-4-data-structures-objects-and-arrays.md), é sempre uma boa ideia se acostumar a iniciar o contador por 0.
 
 Um loop `do` tem uma estrutura de controle similar ao loop `while`. Eles se diferem somente em um ponto: um loop `do` executa seu [body][body] pelo menos uma vez, e inicia o teste se deve para somente após a primeira execução. Pra reproduzir este cenário, o teste deve aparecer depois do [body][body] do loop.
 
@@ -428,7 +428,7 @@ fuzzyLittleTurtle
 
 O primeiro estilo pode ser difícil de ler. Eu prefiro algo parecido com o exemplo com underscores, mas é um estilo doloroso pra escrever. As funções padrão do JavaScript, e a maioria dos programadores, seguem o último exemplo. Eles deixam cada início de palavra maiúscula, exceto a primeira. Não é difícil se acostumar com pequenas coisas como essas, e um código com vários estilos diferentes de nomes pode ser bem estranho pra ler, então seguimos esta convenção.
 
-Em alguns casos, assim como a função `Number`, a primeira letra do binding também está maiuscula. Isso foi feito para marcar a função como um **construtor**. O que é um construtor vai ficar mais claro no  [capítulo 6](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/06-chapter-6-the-secret-life-of-objects.md). Por enquanto, tente não se chatear com essa aparente falta de consistência.
+Em alguns casos, assim como a função `Number`, a primeira letra do binding também está maiuscula. Isso foi feito para marcar a função como um **construtor**. O que é um construtor vai ficar mais claro no  [capítulo 6](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/06-chapter-6-the-secret-life-of-objects.md). Por enquanto, tente não se chatear com essa aparente falta de consistência.
 
 
 
@@ -477,9 +477,9 @@ Funções são valores especiais que encapsulam uma parte de programa. Você pod
 
 Os exercícios abaixo são propostos pelo autor, abordando o que foi aprendido nos capítulos 1 e 2.
 
-[Clicando aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md) você pode ler e fazer os exercícios da segunda edição traduzida pela BrazilJS.
+[Clicando aqui](https://github.com/braziljs/eloquente-javascript/blob/main/chapters/02-estrutura-do-programa.md) você pode ler e fazer os exercícios da segunda edição traduzida pela BrazilJS.
 
 Clicando abaixo, você irá para a página com os exercícios respondidos referente ao primeiro e segundo capítulo:
 
-### [Exercícios respondidos](https://github.com/gildoneto/estudando-javascript/blob/master/eloquent-javascript-3rd-edition/22-exercises-chapters-1-and-2.md) ⬅
+### [Exercícios respondidos](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/22-exercises-chapters-1-and-2.md) ⬅
 
