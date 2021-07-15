@@ -572,8 +572,8 @@ Um aspecto fundamental para compreender as funções é compreender os escopos. 
 
 Os exercícios abaixo são propostos pelo autor, abordando o que foi aprendido no capítulo 3.
 
-[Clicando aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/03-funcoes.md) você pode ler e fazer os exercícios da segunda edição traduzida pela BrazilJS.
+[Clicando aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/03-funcoes.md) você pode ler e fazer os exercícios deste capítulo referente a segunda edição do livro traduzido pela BrazilJS.
 
-Referente a terceira edição do livro, clicando abaixo você irá para a página com os exercícios referente a este capítulo:
+Já referente a terceira edição, clicando abaixo você irá para a página dos exercícios deste capítulo com as minhas respostas e as do autor:
 
 ### [Exercícios - #3rd Edition](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/23-exercises-chapter-3.md) ⬅

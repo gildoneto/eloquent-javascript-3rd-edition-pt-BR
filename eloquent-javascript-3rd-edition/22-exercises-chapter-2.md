@@ -38,7 +38,7 @@ Minha primeira resposta:
 - fim do código 
 
 
-  <img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/master/eloquent-javascript-3rd-edition/img/01_looping-a-triangle.png" alt="Answer - Looping a Triangle" width="600" />
+  <img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/master/eloquent-javascript-3rd-edition/img/2.1_looping-a-triangle.png" alt="Answer - 2.1 Looping a Triangle" width="600" />
 
 
 
@@ -63,18 +63,18 @@ Quando conseguir implementar o proposto acima, modifique seu código para printa
 
 ##### FizzBuzz - Minha solução:
 
- <img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/master/eloquent-javascript-3rd-edition/img/02_fizz-buzz.png" alt="Answer - FizzBuzz" width="600" />
+ <img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/master/eloquent-javascript-3rd-edition/img/2.2_fizzbuzz.png" alt="Answer - 2.2 FizzBuzz" width="600" />
 
-Abaixo resposta do autor. Para ver a resposta no site do livro [clique aqui](https://eloquentjavascript.net/code/#2.2), e na página clique em <span style="color:red">look at the solution</span>.
+Abaixo resposta do autor. Para ver a resposta no site do livro [clique aqui](https://eloquentjavascript.net/code/#2.2), e na página clique em <span style="color:red">*look at the solution*</span>.
 
-````javascript
+```javascript
 for (let n = 1; n <= 100; n++) {
   let output = "";
   if (n % 3 == 0) output += "Fizz";
   if (n % 5 == 0) output += "Buzz";
   console.log(output || n);
 }
-````
+```
 
 # ChessBoard ♟
 
@@ -97,11 +97,11 @@ Quando você escrever um programa que gera esse padrão, defina um binding `size
 
 ##### ChessBoard - Minha solução:
 
- <img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/master/eloquent-javascript-3rd-edition/img/03_chessboard.png" alt="Answer - ChessBoard" width="600" />
+ <img src="https://raw.githubusercontent.com/gildoneto/estudando-javascript/master/eloquent-javascript-3rd-edition/img/2.3_chessboard.png" alt="Answer - 2.3 ChessBoard" width="600" />
 
 Abaixo resposta do autor. Para ver a resposta no site do livro [clique aqui](https://eloquentjavascript.net/code/#2.3), e na página clique em <span style="color:red">look at the solution</span>.
 
-````javascript
+```javascript
 let size = 8;
 
 let board = "";
@@ -118,5 +118,5 @@ for (let y = 0; y < size; y++) {
 }
 
 console.log(board);
-````
+```
 

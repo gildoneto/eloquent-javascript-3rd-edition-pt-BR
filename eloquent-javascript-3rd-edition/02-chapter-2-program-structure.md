@@ -477,9 +477,9 @@ Funções são valores especiais que encapsulam uma parte de programa. Você pod
 
 Os exercícios abaixo são propostos pelo autor, abordando o que foi aprendido nos capítulos 1 e 2.
 
-[Clicando aqui](https://github.com/braziljs/eloquente-javascript/blob/main/chapters/02-estrutura-do-programa.md) você pode ler e fazer os exercícios da segunda edição traduzida pela BrazilJS.
+[Clicando aqui](https://github.com/braziljs/eloquente-javascript/blob/main/chapters/02-estrutura-do-programa.md) você pode ler e fazer os exercícios deste capítulo referente a segunda edição do livro traduzido pela BrazilJS.
 
-Clicando abaixo, você irá para a página com os exercícios respondidos referente ao primeiro e segundo capítulo:
+Já referente a terceira edição, clicando abaixo você irá para a página dos exercícios deste capítulo com as minhas respostas e as do autor:
 
-### [Exercícios respondidos](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/22-exercises-chapters-1-and-2.md) ⬅
+### [Exercícios - #3rd Edition](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/22-exercises-chapter-2.md) ⬅
 
