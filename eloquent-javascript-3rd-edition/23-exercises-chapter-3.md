@@ -40,6 +40,11 @@ Teste com os valores `50` e `75`. Veja como se comporta com o valor `-1`. Por qu
 
 # Bean Counting #️⃣
 
+Você pode obter o enésimo caractere, ou letra, de uma string escrevendo "string"[N]. O valor retornado será uma string contendo apenas um caractere (por exemplo, "b"). O primeiro caractere tem posição 0, o que faz com que o último seja encontrado na posição string.length - 1. Em outras palavras, uma string de dois caracteres tem comprimento 2 e seus caracteres têm posições 0 e 1.
+
+Escreva uma função `countBs` que recebe uma string como seu único argumento e retorna um número que indica quantos caracteres “B” maiúsculos existem na string.
+
+Em seguida, escreva uma função chamada countChar que se comporte como countBs, mas que recebe um segundo argumento que indica o caractere que deve ser contado (em vez de contar apenas caracteres “B” maiúsculos). Reescreva countBs para usar essa nova função.
 
 ------
 
