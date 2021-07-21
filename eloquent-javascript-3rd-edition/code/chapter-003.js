@@ -28,7 +28,7 @@ direito no dia 20/07/2021.
 
 // 3.3 - Bean Counting
 // Eloquent JavaScript 3rd Edition
-// Written by @gildoneto on xx July 2021
+// Written by @gildoneto on 21 July 2021
 
 function countBs(text){
     let result = 0;
@@ -37,6 +37,21 @@ function countBs(text){
            result++; 
         }
     }
-    console.log(result)
+    return result
 }
 
+function countChar(text, char){
+    let result = 0;
+    for (let i = 0; i < text.length; i++){
+        if (text[i] == char){
+           result++; 
+        }
+    }
+
+    return result
+}
+
+console.log(countBs("BBC"));
+// → 2
+console.log(countChar("kakkerlak", "k"));
+// → 4
