@@ -1,6 +1,6 @@
 # 1. Valores, Tipos e Operadores
 
-[Values, Types, and Operators]([Values, Types, and Operators :: Eloquent JavaScript](https://eloquentjavascript.net/01_values.html))
+[Values, Types, and Operators :: Eloquent JavaScript](https://eloquentjavascript.net/01_values.html)
 
 Neste capítulo aprendemos:
 
