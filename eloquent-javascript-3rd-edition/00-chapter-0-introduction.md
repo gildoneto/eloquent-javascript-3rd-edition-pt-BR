@@ -1,8 +1,18 @@
-# 0. Introdução
+# [Introdução](https://eloquentjavascript.net/00_intro.html)
+
+> Achamos que estamos criando o sistema para nossos próprios propósitos. Acreditamos que estamos fazendo isso à nossa própria imagem... Mas o computador não é realmente como nós. É uma projeção de uma parte muito tênue de nós mesmos: aquela porção dedicada à lógica, ordem, regra e clareza.
+>
+> -- Ellen Ullman, Close to the Machine: Technophilia and its Discontents
+
+<div align="center">
+<br>
+<img src="https://eloquentjavascript.net/img/chapter_picture_00.jpg"  alt="Desenho de uma chave de fenda e uma placa de circuito"  width="400" style="border-radius:50%; border:4px double #666">
+<br><br>
+</div>
 
 Este é um livro sobre como instruir computadores. Os computadores são tão comuns quanto as chaves de fenda hoje em dia, mas são um pouco mais complexos, e nem sempre é fácil fazê-los fazer o que você quer.
 
-Se a tarefa que você solicita para o seu computador for comum e bem compreendida, como abrir seu e-mail ou uma espécie ded calculadora, você pode abrir um aplicativo apropriado e começar a trabalhar. Mas para tarefas peculiares ou muito abastratas, provavelmente não há aplicação pronta para isso.
+Se a tarefa que você solicita para o seu computador for comum e bem compreendida, como abrir seu e-mail ou uma espécie de calculadora, você pode abrir um aplicativo apropriado e começar a trabalhar. Mas para tarefas peculiares ou muito abstratas, provavelmente não há aplicação pronta para isso.
 
 É aí que a programação pode entrar. *Programar* é o ato de construir um *programa* - um conjunto de instruções precisas dizendo a um computador o que fazer. Como os computadores são bestas burras e pedantes, a programação é fundamentalmente tediosa e frustrante.
 
@@ -14,13 +24,13 @@ A certa altura, as interfaces baseadas em linguagem, como os prompts `BASIC` e `
 
 Este livro tentará familiarizá-lo o suficiente com essa linguagem para fazer coisas úteis e divertidas com ela.
 
-### On programming
+## On programming
 
 Além de explicar JavaScript, apresentarei os princípios básicos de programação. A programação, ao que parece, é difícil. As regras fundamentais são simples e claras, mas os programas construídos com base nessas regras tendem a se tornar complexos o suficiente para introduzir suas próprias regras e complexidade. Você está construindo seu próprio labirinto, de certa forma, e pode se perder nele.
 
 Haverá momentos em que ler este livro será terrivelmente frustrante. Se você é novo em programação, haverá muito material novo para digerir. Grande parte deste material será então combinado de forma a exigir que você faça conexões adicionais.
 
-Cabe a você fazer o esforço necessário. Quando você estiver lutando para seguir o livro, não tire conclusões precipitadas sobre suas próprias capacidades. Você está bem - você só precisa continuar. Faça uma pausa, releia algum material e certifique-se de ler e entender os programas e exercícios de exemplo. Aprender é um trabalho árduo, mas tudo o que você aprende é seu e facilitará o aprendizado subsequente.
+Cabe a você fazer o esforço necessário. Quando você estiver tendo dificuldades para seguir o livro, não tire conclusões precipitadas sobre suas próprias capacidades. Você está bem - você só precisa continuar. Faça uma pausa, releia algum material e certifique-se de ler e entender os programas e exercícios de exemplo. Aprender é um trabalho árduo, mas tudo o que você aprende é seu e facilitará o aprendizado subsequente.
 
 >"Quando a ação se torna inútil, reúna informações; quando a informação se torna inútil, durma."
 >
@@ -28,9 +38,8 @@ Cabe a você fazer o esforço necessário. Quando você estiver lutando para seg
 
 Um programa é muitas coisas. É um pedaço de texto digitado por um programador, é a força direcionadora que faz o computador fazer o que faz, são dados na memória do computador, e ainda controla as ações realizadas nessa mesma memória. Analogias que tentam comparar programas com objetos com os quais estamos familiarizados tendem a falhar. Um ajuste superficial é o de uma máquina – muitas partes separadas tendem a estar envolvidas e, para fazer a coisa toda funcionar, temos que considerar as maneiras pelas quais essas partes se interconectam e contribuem para a operação do todo.
 
-Um computador é uma máquina física que atua como host para essas máquinas imateriais. Os próprios computadores só podem fazer coisas estupidamente diretas. A razão pela qual eles são tão úteis é que eles fazem essas coisas em uma velocidade incrivelmente alta. Um programa pode combinar engenhosamente um número enorme dessas ações simples para fazer coisas muito complicadas.
+Um computador é uma máquina física que atua como um anfitrião para essas máquinas imateriais. Os próprios computadores só podem fazer coisas estupidamente diretas. A razão pela qual eles são tão úteis é que eles fazem essas coisas em uma velocidade incrivelmente alta. Um programa pode combinar engenhosamente um número enorme dessas ações simples para fazer coisas muito complicadas.
 
 Um programa é uma construção de pensamento. Não custa nada construir, não tem peso e cresce facilmente sob nossas mãos de digitação.
 
 Mas sem cuidado, o tamanho e a complexidade de um programa ficarão fora de controle, confundindo até mesmo a pessoa que o criou. Manter os programas sob controle é o principal problema da programação. Quando um programa funciona, é lindo. A arte da programação é a habilidade de controlar a complexidade. O programa ideal é simplificado em sua complexidade.
-
