@@ -1,9 +1,10 @@
 # [Eloquent Javascript 3rd Edition](https://eloquentjavascript.net/)
 
 <div align="center">
-<img src="https://eloquentjavascript.net/img/cover.jpg"  alt="Eloquen Javascript Book 3rd Edition"  width="300">
-<br><br>
+
+![Capa do Livro Eloquent Javascript 3rd Edition](https://eloquentjavascript.net/img/cover.jpg)
 </div>
+
 
 Minha aventura começa com a leitura da 3° edição do livro **Eloquent Javascript** do autor Marijn Haverbeke.
 
