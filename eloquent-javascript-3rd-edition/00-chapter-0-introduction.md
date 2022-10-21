@@ -1,14 +1,12 @@
-# [Introdução](https://eloquentjavascript.net/00_intro.html)
+# Introdução
+
+[Introduction](https://eloquentjavascript.net/00_intro.html)
 
 > Achamos que estamos criando o sistema para nossos próprios propósitos. Acreditamos que estamos fazendo isso à nossa própria imagem... Mas o computador não é realmente como nós. É uma projeção de uma parte muito tênue de nós mesmos: aquela porção dedicada à lógica, ordem, regra e clareza.
 >
 > -- Ellen Ullman, Close to the Machine: Technophilia and its Discontents
 
-<div align="center">
-<br>
-<img src="https://eloquentjavascript.net/img/chapter_picture_00.jpg"  alt="Desenho de uma chave de fenda e uma placa de circuito"  width="400" style="border-radius:50%; border:4px double #666">
-<br><br>
-</div>
+![Desenho de uma chave de fenda e uma placa de circuito](https://eloquentjavascript.net/img/chapter_picture_00.jpg)
 
 Este é um livro sobre como instruir computadores. Os computadores são tão comuns quanto as chaves de fenda hoje em dia, mas são um pouco mais complexos, e nem sempre é fácil fazê-los fazer o que você quer.
 
@@ -44,29 +42,6 @@ Um programa é uma construção de pensamento. Não custa nada construir, não t
 
 Mas sem cuidado, o tamanho e a complexidade de um programa ficarão fora de controle, confundindo até mesmo a pessoa que o criou. Manter os programas sob controle é o principal problema da programação. Quando um programa funciona, é lindo. A arte da programação é a habilidade de controlar a complexidade. O programa ideal é simplificado em sua complexidade.
 
-<div style="
-  display: flex;
-  justify-content: space-around;
-">
+[Página principal](https://github.com/gildoneto/estudando-javascript)
 
-<button style="
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: 1px;
-  padding: 13px 20px 13px;
-  border: 1px solid black;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0);
-"><a href="https://github.com/gildoneto/estudando-javascript">Página principal</a></button>
-
-<button style="
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: 1px;
-  padding: 13px 20px 13px;
-  border: 1px solid black;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0);
-"><a href="https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/01-chapter-1-values-types-operators.md">Ir para o próximo capítulo</a></button>
-
-</div>
+[Ir para o próximo capítulo](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/01-chapter-1-values-types-operators.md)
