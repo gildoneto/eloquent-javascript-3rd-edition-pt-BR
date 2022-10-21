@@ -43,3 +43,30 @@ Um computador é uma máquina física que atua como um anfitrião para essas má
 Um programa é uma construção de pensamento. Não custa nada construir, não tem peso e cresce facilmente sob nossas mãos de digitação.
 
 Mas sem cuidado, o tamanho e a complexidade de um programa ficarão fora de controle, confundindo até mesmo a pessoa que o criou. Manter os programas sob controle é o principal problema da programação. Quando um programa funciona, é lindo. A arte da programação é a habilidade de controlar a complexidade. O programa ideal é simplificado em sua complexidade.
+
+<div style="
+  display: flex;
+  justify-content: space-around;
+">
+
+<button style="
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+"><a href="https://github.com/gildoneto/estudando-javascript">Página principal</a></button>
+
+<button style="
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+"><a href="https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/01-chapter-1-values-types-operators.md">Ir para o próximo capítulo</a></button>
+
+</div>
