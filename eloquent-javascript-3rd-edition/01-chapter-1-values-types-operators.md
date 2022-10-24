@@ -284,3 +284,41 @@ console.log(null == 0);
 
 Esse comportamento é muitas vezes útil. Quando você quiser testar se um valor tem um valor real em vez de `null` ou `undefined`, você pode compará-lo com `null` com o operador `==` (ou `!=`).
 
+Mas e se você quiser testar se algo se refere ao valor preciso `false`? Expressões como `0 == false` e `"" == false` também são verdadeiras devido à conversão automática de tipo. Quando você **não** deseja que nenhuma conversão de tipo aconteça, há dois operadores adicionais: `===` e `!==`. O primeiro testa se um valor é **precisamente** igual ao outro, e o segundo testa se não é **precisamente** igual. Portanto, `"" === false` é falso conforme o esperado.
+
+Eu recomendo usar os operadores de comparação de três caracteres defensivamente para evitar que conversões de tipo inesperadas o atrapalhem. Mas quando você tem certeza de que os tipos de ambos os lados serão os mesmos, não há problema em usar os operadores mais curtos.
+
+## Curto-circuito de operadores lógicos
+
+Os operadores lógicos `&&` e `||` lidar com valores de diferentes tipos de uma maneira peculiar. Eles converterão o valor do lado esquerdo para o tipo booleano para decidir o que fazer, mas dependendo do operador e do resultado dessa conversão, eles retornarão o valor original à esquerda ou o valor à direita.
+
+O `||` operador, por exemplo, retornará o valor à sua esquerda quando puder ser convertido em true e retornará o valor à sua direita caso contrário. Isso tem o efeito esperado quando os valores são booleanos e faz algo análogo para valores de outros tipos.
+
+```javascript
+console.log(null || "user")
+// → user
+console.log("Agnes" || "user")
+// → Agnes
+```
+
+Podemos usar essa funcionalidade como uma maneira de retornar a um valor padrão. Se você tem um valor que pode estar vazio, você pode colocar `||` depois dele com um valor de reposição. Se o valor inicial puder ser convertido em falso, você receberá a substituição. As regras para converter strings e números em valores booleanos afirmam que `0`, `NaN` e a string vazia `""` contam como `false`, enquanto todos os outros valores contam como `true`. Então `0 || -1` produz `-1` e `"" || "!?"` retorna `"!?"`.
+
+O operador `&&` funciona de forma semelhante, mas de outra forma. Quando o valor à sua esquerda é algo que converte em `false`, ele retorna esse valor e, caso contrário, retorna o valor à sua direita.
+
+Outra propriedade importante desses dois operadores é que a parte à sua direita é avaliada apenas quando necessário. No caso de `true || X`, não importa o que seja `X`, mesmo que seja um programa que faça algo terrível o resultado será `true` e `X` nunca será avaliado. O mesmo vale para `false && X`, que é `false` e ignorará `X`. Isso é chamado de avaliação de curto-circuito(*short-circuit evaluation*).
+
+O operador condicional funciona de maneira semelhante. Do segundo e terceiro valores, apenas o selecionado é avaliado.
+
+## Resumo
+
+Examinamos quatro tipos de valores JavaScript neste capítulo: números, strings, booleanos e valores indefinidos.
+
+Esses valores são criados digitando seu nome (`true`, `null`) ou valor (`13`, `"abc"`). Você pode combinar e transformar valores com operadores. Vimos operadores binários para aritmética (`+`, `-`, `*`, `/` e `%`), concatenação de strings (`+`), comparação (`==`, `!=`, `===`, `!==`, `<`, `>`, `<=`, `>=`), e lógica (`&&`, `||`), bem como vários operadores unários (`-` para negar um número, `!` para negar logicamente e `typeof` para encontrar o tipo de um valor) e um operador ternário (`?:`) para escolher um dos dois valores baseados em um terceiro valor.
+
+Isso fornece informações suficientes para usar o JavaScript como uma calculadora de bolso, mas não muito mais. O próximo capítulo começará a unir essas expressões em programas básicos.
+
+[Ir para o próximo capítulo](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/02-chapter-2-program-structure.md)
+
+[Capítulo anterior](https://github.com/gildoneto/estudando-javascript/blob/main/eloquent-javascript-3rd-edition/01-chapter-1-values-types-operators.md)
+
+[Página principal](https://github.com/gildoneto/estudando-javascript)
