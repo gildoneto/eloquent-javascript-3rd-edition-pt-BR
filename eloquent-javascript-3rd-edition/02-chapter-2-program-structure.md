@@ -363,7 +363,7 @@ counter = counter + 1;
 O JavaScript disponibiliza um atalho pra isso:
 
 ````javascript
-counter =+ 1;
+counter += 1;
 ````
 
 Atalhos similares funcionam pra vários outros operadores, como o `result *= 2` para dobrar o `result`, ou `counter -= 1` pra fazer contagem regressiva.
